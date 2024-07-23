@@ -3,11 +3,14 @@ extends Node2D
 
 export var numero_de_pessoas = 15
 export var textura: Texture
+# aumento do numero maximo de pessoas
+export var recompensa := 0
 
 
 var aleatorio = RandomNumberGenerator.new()
 var pessoas: Array = []
 var referencia_jogador: KinematicBody2D
+
 
 onready var barra_de_progresso = $BarraDeProgresso as ProgressBar
 
@@ -43,4 +46,5 @@ func _on_ControleDeToque_toque_realizado(historico):
 	pessoas.append(novo_seguidor)
 	if pessoas.size() == numero_de_pessoas:
 		referencia_jogador.pontos_de_habilidade += 1
+		referencia_jogador.aumentar_maximo_seguidores(recompensa)
 	novo_seguidor.mobilizar(self)
