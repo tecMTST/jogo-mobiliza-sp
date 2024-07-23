@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bob_andando.mp3-88a85dafc7740fdafd273688431fedd3.mp3str"
+
+[deps]
+
+source_file="res://elementos/audio/bob_andando.mp3"
+dest_files=[ "res://.import/bob_andando.mp3-88a85dafc7740fdafd273688431fedd3.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
