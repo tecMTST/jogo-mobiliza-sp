@@ -36,6 +36,9 @@ func _ready():
 	barra_tempo.max_value = tempo_segundos
 	barra_tempo.value = temporizador.wait_time
 
+func quantidade_seguidores():
+	return _seguidores.size()
+
 func retirar_seguidor():
 	$Animador.play("squish")
 	return _seguidores.pop_back()
@@ -112,3 +115,4 @@ func aumentar_area(valor: int) -> bool:
 	pontos_de_habilidade -= 1
 	maximo_seguidores += valor
 	return true
+

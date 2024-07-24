@@ -9,7 +9,7 @@ export var recompensa := 0
 
 var aleatorio = RandomNumberGenerator.new()
 var pessoas: Array = []
-var referencia_jogador: KinematicBody2D
+var referencia_jogador: Jogador
 
 
 onready var barra_de_progresso = $BarraDeProgresso as ProgressBar
@@ -27,18 +27,19 @@ func _process(delta):
 	barra_de_progresso.value = pessoas.size()
 
 
-func _on_Area2D_body_entered(body):
+func _on_Area2D_body_entered(body: Jogador):
 	referencia_jogador = body
+	if Global.modo_debug:
+		var a_transferir := min(referencia_jogador.quantidade_seguidores(), numero_de_pessoas)
+		for i in range(a_transferir):
+			retirar_do_jogador(referencia_jogador)
 
 
 func _on_Area2D_body_exited(body):
 	referencia_jogador = null
 
 
-func _on_ControleDeToque_toque_realizado(historico):
-	if not referencia_jogador or pessoas.size() >= numero_de_pessoas:
-		return
-
+func retirar_do_jogador(jogador: Jogador):
 	var novo_seguidor = referencia_jogador.retirar_seguidor()
 	if novo_seguidor == null:
 		return
@@ -48,3 +49,9 @@ func _on_ControleDeToque_toque_realizado(historico):
 		referencia_jogador.pontos_de_habilidade += 1
 		referencia_jogador.aumentar_maximo_seguidores(recompensa)
 	novo_seguidor.mobilizar(self)
+
+
+func _on_ControleDeToque_toque_realizado(historico):
+	if not referencia_jogador or pessoas.size() >= numero_de_pessoas:
+		return
+	retirar_do_jogador(referencia_jogador)

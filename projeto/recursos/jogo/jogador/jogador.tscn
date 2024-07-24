@@ -1,12 +1,15 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://recursos/jogo/jogador/jogador.gd" type="Script" id=1]
 [ext_resource path="res://elementos/imagem/pessoas/branco.png" type="Texture" id=2]
 [ext_resource path="res://elementos/imagem/smoke.png" type="Texture" id=3]
 [ext_resource path="res://elementos/fontes/roboto.tres" type="DynamicFont" id=4]
 [ext_resource path="res://recursos/jogo/jogador/alavanca_de_toque/alavanca_de_toque.tscn" type="PackedScene" id=5]
+[ext_resource path="res://elementos/imagem/jogador/boulos.png" type="Texture" id=6]
 [ext_resource path="res://recursos/jogo/texto_contador/texto_contador.tscn" type="PackedScene" id=7]
 [ext_resource path="res://recursos/jogo/jogador/ContadorFPS.gd" type="Script" id=8]
+[ext_resource path="res://elementos/imagem/jogador/boulos_pressed.png" type="Texture" id=9]
+[ext_resource path="res://recursos/jogo/jogador/ToggleDebug.gd" type="Script" id=10]
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 12.0
@@ -154,6 +157,9 @@ tracks/1/keys = {
 "values": [ Vector2( 0, -48 ), Vector2( 0, -15 ), Vector2( 0, -55 ), Vector2( 0, -48 ) ]
 }
 
+[sub_resource type="CircleShape2D" id=28]
+radius = 153.584
+
 [node name="jogador" type="KinematicBody2D"]
 position = Vector2( 360, 640 )
 collision_layer = 2049
@@ -212,5 +218,23 @@ animation = "nada"
 [node name="Animador" type="AnimationPlayer" parent="."]
 anims/squish = SubResource( 27 )
 
+[node name="ToggleDebug" type="Node2D" parent="."]
+position = Vector2( -300, 500 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 10 )
+
+[node name="Gui" type="Sprite" parent="ToggleDebug"]
+texture = ExtResource( 6 )
+
+[node name="GuiPressed" type="Sprite" parent="ToggleDebug"]
+visible = false
+texture = ExtResource( 9 )
+
+[node name="Area2D" type="Area2D" parent="ToggleDebug"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ToggleDebug/Area2D"]
+shape = SubResource( 28 )
+
 [connection signal="alavanca_movida" from="alavanca_de_toque" to="." method="_on_alavanca_de_toque_alavanca_movida"]
 [connection signal="alavanca_solta" from="alavanca_de_toque" to="." method="_on_alavanca_de_toque_alavanca_solta"]
+[connection signal="mouse_entered" from="ToggleDebug/Area2D" to="ToggleDebug" method="_on_Area2D_mouse_entered"]

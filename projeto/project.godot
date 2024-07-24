@@ -109,6 +109,7 @@ default_bus_layout="res://elementos/audio/mixer/mixer.tres"
 [autoload]
 
 TrocadorDeCenas="*res://addons/trocador_de_cenas/trocador_de_cenas.tscn"
+Global="*res://recursos/jogo/Global.tscn"
 
 [display]
 
