@@ -123,7 +123,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/controle_de_toque/plugin.cfg", "res://addons/gerenciador_de_estados/plugin.cfg", "res://addons/trocador_de_cenas/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/trocador_de_cenas/plugin.cfg" )
 
 [global]
 
