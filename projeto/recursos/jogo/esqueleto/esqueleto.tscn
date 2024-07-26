@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://elementos/imagem/partes/leg.png" type="Texture" id=1]
+
+[node name="esqueleto" type="Node2D"]
+
+[node name="Skeleton2D" type="Skeleton2D" parent="."]
+
+[node name="perna1" type="Polygon2D" parent="Skeleton2D"]
+texture = ExtResource( 1 )
+polygon = PoolVector2Array( 0, 0, -0.0881805, 23.1534, 21.6049, 23.4179, 18.9594, -1.09709 )
+uv = PoolVector2Array( 0, 0, -0.0881805, 23.1534, 21.6049, 23.4179, 18.9594, -1.09709 )
+
+[node name="perna2" type="Polygon2D" parent="Skeleton2D"]
+texture = ExtResource( 1 )
+polygon = PoolVector2Array( 0, 0, -0.0881805, 23.1534, 21.6049, 23.4179, 18.9594, -1.09709 )
+uv = PoolVector2Array( 0, 0, -0.0881805, 23.1534, 21.6049, 23.4179, 18.9594, -1.09709 )
