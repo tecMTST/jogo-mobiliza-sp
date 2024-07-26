@@ -7,7 +7,7 @@
 [ext_resource path="res://elementos/imagem/pessoas/verde.png" type="Texture" id=8]
 
 [sub_resource type="CircleShape2D" id=3]
-radius = 256.002
+radius = 130.246
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 12.0
