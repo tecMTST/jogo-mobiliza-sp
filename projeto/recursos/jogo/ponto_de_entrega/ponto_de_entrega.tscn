@@ -8,7 +8,7 @@
 [ext_resource path="res://recursos/jogo/ponto_de_entrega/AudioStreamPonto.gd" type="Script" id=6]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 209.239
+radius = 124.004
 
 [sub_resource type="CircleShape2D" id=2]
 
