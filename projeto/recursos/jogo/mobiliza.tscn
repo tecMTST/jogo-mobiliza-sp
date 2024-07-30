@@ -1,11 +1,15 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://recursos/jogo/jogador/jogador.tscn" type="PackedScene" id=1]
 [ext_resource path="res://recursos/jogo/predio/predio.tscn" type="PackedScene" id=2]
 [ext_resource path="res://recursos/jogo/pessoa/pessoa.tscn" type="PackedScene" id=3]
+[ext_resource path="res://elementos/audio/bgm/bgm-coracao.mp3" type="AudioStream" id=4]
 [ext_resource path="res://recursos/jogo/mobiliza.gd" type="Script" id=5]
 [ext_resource path="res://recursos/jogo/mapa/mapa.tscn" type="PackedScene" id=6]
 [ext_resource path="res://recursos/jogo/ponto_de_entrega/ponto_de_entrega.tscn" type="PackedScene" id=7]
+[ext_resource path="res://elementos/imagem/pontos/comicio.png" type="Texture" id=8]
+[ext_resource path="res://elementos/imagem/pontos/tenda.png" type="Texture" id=9]
+[ext_resource path="res://elementos/imagem/pontos/ato.png" type="Texture" id=10]
 
 [node name="mobiliza" type="Node2D"]
 position = Vector2( 1, 0 )
@@ -143,30 +147,37 @@ position = Vector2( 1474, -412 )
 [node name="ponto_de_entrega" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 235, -56 )
 numero_de_pessoas = 5
+textura = ExtResource( 9 )
 
 [node name="ponto_de_entrega2" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 1385, -6 )
 numero_de_pessoas = 20
+textura = ExtResource( 10 )
 
 [node name="ponto_de_entrega3" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( -1783, 21 )
 numero_de_pessoas = 20
+textura = ExtResource( 10 )
 
 [node name="ponto_de_entrega5" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( -1020, -1386 )
 numero_de_pessoas = 5
+textura = ExtResource( 9 )
 
 [node name="ponto_de_entrega6" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 14, -1810 )
 numero_de_pessoas = 20
+textura = ExtResource( 10 )
 
 [node name="ponto_de_entrega7" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 1281, -1225 )
 numero_de_pessoas = 5
+textura = ExtResource( 9 )
 
 [node name="ponto_de_entrega4" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 9, 1753 )
 numero_de_pessoas = 50
+textura = ExtResource( 8 )
 
 [node name="pessoa" parent="YSort" instance=ExtResource( 3 )]
 position = Vector2( -300, -52 )
@@ -548,3 +559,8 @@ process_mode = 0
 wait_time = 10.0
 one_shot = true
 autostart = true
+
+[node name="AudioStreamBGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+autoplay = true
+bus = "BGM"

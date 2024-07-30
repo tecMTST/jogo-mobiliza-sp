@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://recursos/jogo/jogador/jogador.gd" type="Script" id=1]
 [ext_resource path="res://elementos/imagem/pessoas/branco.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://recursos/jogo/jogador/ContadorFPS.gd" type="Script" id=8]
 [ext_resource path="res://elementos/imagem/jogador/boulos_pressed.png" type="Texture" id=9]
 [ext_resource path="res://recursos/jogo/jogador/ToggleDebug.gd" type="Script" id=10]
+[ext_resource path="res://recursos/jogo/jogador/AudioStreamJogador.gd" type="Script" id=11]
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 12.0
@@ -235,6 +236,11 @@ texture = ExtResource( 9 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ToggleDebug/Area2D"]
 shape = SubResource( 28 )
 
+[node name="AudioStreamJogador" type="AudioStreamPlayer2D" parent="."]
+bus = "SFX PLAYER"
+script = ExtResource( 11 )
+
+[connection signal="atividade_player" from="." to="AudioStreamJogador" method="_on_jogador_atividade_player"]
 [connection signal="alavanca_movida" from="alavanca_de_toque" to="." method="_on_alavanca_de_toque_alavanca_movida"]
 [connection signal="alavanca_solta" from="alavanca_de_toque" to="." method="_on_alavanca_de_toque_alavanca_solta"]
 [connection signal="mouse_entered" from="ToggleDebug/Area2D" to="ToggleDebug" method="_on_Area2D_mouse_entered"]

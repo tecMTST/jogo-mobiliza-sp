@@ -23,6 +23,8 @@ var velocidade = Vector2()
 var _movendo = false
 var jogador = true
 
+signal atividade_player(tipo)
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	aleatorio.randomize()
@@ -85,9 +87,11 @@ func _process(delta):
 	if _movendo:
 		sprite.play("andar")
 		poeira.play("poeira")
+		emit_signal("atividade_player","andar")
 	else:
 		sprite.play("parar")
 		poeira.play("nada")
+		emit_signal("atividade_player","parado")
 	texto_seguidores.alterar_valor(_seguidores.size())
 	barra_tempo.value = temporizador.time_left
 

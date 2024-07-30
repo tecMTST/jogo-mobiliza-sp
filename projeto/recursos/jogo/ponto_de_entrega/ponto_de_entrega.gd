@@ -15,6 +15,7 @@ var referencia_jogador: Jogador
 onready var barra_de_progresso = $BarraDeProgresso as ProgressBar
 onready var texto = $texto_contador
 
+signal atividade_ponto(tipo_ponto,tipo_entrega)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -46,11 +47,13 @@ func retirar_do_jogador(jogador: Jogador):
 	var novo_seguidor = referencia_jogador.retirar_seguidor()
 	if novo_seguidor == null:
 		return
-
+	
+	emit_signal("atividade_ponto",numero_de_pessoas,"normal")
 	pessoas.append(novo_seguidor)
 	if pessoas.size() == numero_de_pessoas:
 		referencia_jogador.pontos_de_habilidade += 1
 		$Explosao.play("parabens")
+		emit_signal("atividade_ponto",numero_de_pessoas,"final")
 		referencia_jogador.aumentar_maximo_seguidores(recompensa)
 	novo_seguidor.mobilizar(self)
 
