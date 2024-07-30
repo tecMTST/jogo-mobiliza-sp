@@ -15,8 +15,13 @@ func _ready():
 func _process(delta):
 	pass
 
+#func _on_Area2D_mouse_entered():
+#	Global.modo_debug = !Global.modo_debug
+#	$Gui.visible = !Global.modo_debug
+#	$GuiPressed.visible = Global.modo_debug
 
-func _on_Area2D_mouse_entered():
-	Global.modo_debug = !Global.modo_debug
-	$Gui.visible = !Global.modo_debug
-	$GuiPressed.visible = Global.modo_debug
+func _on_Area2D_input_event(viewport, event, shape_idx):
+	if event is InputEventScreenTouch and event.is_pressed():
+		Global.modo_debug = !Global.modo_debug
+		$Gui.visible = !Global.modo_debug
+		$GuiPressed.visible = Global.modo_debug

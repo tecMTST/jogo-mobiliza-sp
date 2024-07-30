@@ -225,10 +225,10 @@ scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 10 )
 
 [node name="Gui" type="Sprite" parent="ToggleDebug"]
+visible = false
 texture = ExtResource( 6 )
 
 [node name="GuiPressed" type="Sprite" parent="ToggleDebug"]
-visible = false
 texture = ExtResource( 9 )
 
 [node name="Area2D" type="Area2D" parent="ToggleDebug"]
@@ -243,4 +243,5 @@ script = ExtResource( 11 )
 [connection signal="atividade_player" from="." to="AudioStreamJogador" method="_on_jogador_atividade_player"]
 [connection signal="alavanca_movida" from="alavanca_de_toque" to="." method="_on_alavanca_de_toque_alavanca_movida"]
 [connection signal="alavanca_solta" from="alavanca_de_toque" to="." method="_on_alavanca_de_toque_alavanca_solta"]
+[connection signal="input_event" from="ToggleDebug/Area2D" to="ToggleDebug" method="_on_Area2D_input_event"]
 [connection signal="mouse_entered" from="ToggleDebug/Area2D" to="ToggleDebug" method="_on_Area2D_mouse_entered"]
