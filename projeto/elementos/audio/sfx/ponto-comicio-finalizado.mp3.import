@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ponto-comicio-finalizado.mp3-81ba075bce2ff5ae58aa2ddd0a48c87c.mp3str"
+
+[deps]
+
+source_file="res://elementos/audio/sfx/ponto-comicio-finalizado.mp3"
+dest_files=[ "res://.import/ponto-comicio-finalizado.mp3-81ba075bce2ff5ae58aa2ddd0a48c87c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

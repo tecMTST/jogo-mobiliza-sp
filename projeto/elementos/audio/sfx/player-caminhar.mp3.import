@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/player-caminhar.mp3-3a4ab8047a2a79222fd5585a7e43e50a.mp3str"
+
+[deps]
+
+source_file="res://elementos/audio/sfx/player-caminhar.mp3"
+dest_files=[ "res://.import/player-caminhar.mp3-3a4ab8047a2a79222fd5585a7e43e50a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
