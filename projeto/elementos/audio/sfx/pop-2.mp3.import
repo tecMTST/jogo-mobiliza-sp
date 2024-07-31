@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/pop-2.mp3-5c4bdd7a82c8de59f1a2afd65c913836.mp3str"
+
+[deps]
+
+source_file="res://elementos/audio/sfx/pop-2.mp3"
+dest_files=[ "res://.import/pop-2.mp3-5c4bdd7a82c8de59f1a2afd65c913836.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

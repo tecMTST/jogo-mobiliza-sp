@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ponto-barraca-finalizado.mp3-d91c4d4f559597f795abcc71b40aed84.mp3str"
+
+[deps]
+
+source_file="res://elementos/audio/sfx/ponto-barraca-finalizado.mp3"
+dest_files=[ "res://.import/ponto-barraca-finalizado.mp3-d91c4d4f559597f795abcc71b40aed84.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

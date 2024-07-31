@@ -14,11 +14,12 @@ onready var _temporizador_sorte := Timer.new()
 
 var _alvo: KinematicBody2D
 var distancia_maxima: int
-var cor='azul'
+var cor="azul"
 var aleatorio: RandomNumberGenerator
 
 onready var vetor_diferente: Vector2
 
+signal atividade_npc(tipo)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -34,22 +35,24 @@ func gerar_vetor_aleatorio():
 		aleatorio.randf_range(-variedade_aleatorio, variedade_aleatorio))
 
 
-func definir_alvo(alvo):
+func definir_alvo(alvo,nova_cor):
 	aleatorio = alvo.aleatorio
 	aleatorio.randomize()
 	distancia_maxima = aleatorio.randi_range(variedade_distancia_maxima.x,variedade_distancia_maxima.y)	
 	vetor_diferente = gerar_vetor_aleatorio()
 	_alvo = alvo
-	cor='verde'
-
+	cor = nova_cor
+	if nova_cor == "verde":
+		emit_signal("atividade_npc","seguindo")
+	elif nova_cor == "vermelha":
+		emit_signal("atividade_npc","mobilizado")
 
 func mobilizar(ponto):
-	definir_alvo(ponto)
-	cor='vermelha'
+	definir_alvo(ponto,"vermelha")
 
 
 func _explorar():
-	if cor != 'vermelha':
+	if cor != "vermelha":
 		return
 	if _temporizador_sorte.time_left <= 0:
 		_temporizador_sorte.wait_time = aleatorio.randf_range(3,5)
@@ -89,4 +92,4 @@ func _on_Area_body_entered(body):
 		return
 	if not body.adicionar_seguidor(self):
 		return
-	definir_alvo(body)
+	definir_alvo(body,"verde")

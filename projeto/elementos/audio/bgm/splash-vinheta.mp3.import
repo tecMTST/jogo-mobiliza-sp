@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/splash-vinheta.mp3-9ca66347760ffc92bc7e5ddbfe0e469c.mp3str"
+
+[deps]
+
+source_file="res://elementos/audio/bgm/splash-vinheta.mp3"
+dest_files=[ "res://.import/splash-vinheta.mp3-9ca66347760ffc92bc7e5ddbfe0e469c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,5 +1,6 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
+[ext_resource path="res://recursos/jogo/pessoa/AudioStreamPessoa.gd" type="Script" id=1]
 [ext_resource path="res://recursos/jogo/pessoa/pessoa.gd" type="Script" id=2]
 [ext_resource path="res://elementos/imagem/pessoas/branco.png" type="Texture" id=3]
 [ext_resource path="res://elementos/imagem/pessoas/azul.png" type="Texture" id=5]
@@ -7,7 +8,7 @@
 [ext_resource path="res://elementos/imagem/pessoas/verde.png" type="Texture" id=8]
 
 [sub_resource type="CircleShape2D" id=3]
-radius = 130.246
+radius = 60.0333
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 12.0
@@ -174,4 +175,11 @@ frames = SubResource( 6 )
 animation = "parada_azul"
 playing = true
 
+[node name="AudioStreamPessoa" type="AudioStreamPlayer2D" parent="."]
+attenuation = 2.07053
+panning_strength = 2.0
+bus = "SFX NPC"
+script = ExtResource( 1 )
+
+[connection signal="atividade_npc" from="." to="AudioStreamPessoa" method="_on_pessoa_atividade_npc"]
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]

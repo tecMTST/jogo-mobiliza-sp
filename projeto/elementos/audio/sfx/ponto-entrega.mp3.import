@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ponto-entrega.mp3-8b0a406d0475c7f752e00fc3c4981158.mp3str"
+
+[deps]
+
+source_file="res://elementos/audio/sfx/ponto-entrega.mp3"
+dest_files=[ "res://.import/ponto-entrega.mp3-8b0a406d0475c7f752e00fc3c4981158.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

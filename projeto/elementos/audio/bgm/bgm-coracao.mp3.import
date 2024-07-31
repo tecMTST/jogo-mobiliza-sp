@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bgm-coracao.mp3-94008a00bf8e1404e5936be80ac3cff0.mp3str"
+
+[deps]
+
+source_file="res://elementos/audio/bgm/bgm-coracao.mp3"
+dest_files=[ "res://.import/bgm-coracao.mp3-94008a00bf8e1404e5936be80ac3cff0.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
