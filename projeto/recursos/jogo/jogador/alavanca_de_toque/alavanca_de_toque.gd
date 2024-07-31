@@ -3,6 +3,7 @@ extends Node2D
 # abencoado seja o https://randommomentania.com/2018/08/godot-touch-screen-joystick-part-1/
 
 export var raio_tolerancia = 400
+export var modo_estatico = true
 
 signal alavanca_movida(posicao)
 signal alavanca_solta
@@ -40,8 +41,9 @@ func _on_ControleDeToque_toque_desfeito(historico):
 func _on_ControleDeToque_toque_realizado(historico):
 	var posicao = get_local_mouse_position()
 	$Base/Animador.play("anuncio")
-	_sprite_topo.position = posicao
-	_sprite_base.position = posicao
+	if not modo_estatico:
+		_sprite_topo.position = posicao
+		_sprite_base.position = posicao
 	_movendo = true
 	_sprite_topo.visible = true
 	_sprite_base.visible = true

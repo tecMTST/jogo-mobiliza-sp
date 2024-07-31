@@ -177,7 +177,7 @@ current = true
 shape = SubResource( 2 )
 
 [node name="alavanca_de_toque" parent="." instance=ExtResource( 5 )]
-position = Vector2( 0, 342 )
+position = Vector2( 0, 0 )
 scale = Vector2( 0.2, 0.2 )
 z_index = 100
 z_as_relative = false
