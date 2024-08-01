@@ -345,8 +345,10 @@ frames = SubResource( 73 )
 [node name="AudioStreamPonto" type="AudioStreamPlayer2D" parent="."]
 attenuation = 4.0
 panning_strength = 2.0
+bus = "SFX PONTO"
 script = ExtResource( 6 )
 
+[connection signal="atividade_ponto" from="." to="AudioStreamPonto" method="_on_ponto_de_entrega_atividade_ponto"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
 [connection signal="toque_realizado" from="ControleDeToque" to="." method="_on_ControleDeToque_toque_realizado"]
