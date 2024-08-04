@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/amb-cidade.mp3-eea863c4eb9cbc9f8a50dd8a1c2190a0.mp3str"
+
+[deps]
+
+source_file="res://elementos/audio/bgm/amb-cidade.mp3"
+dest_files=[ "res://.import/amb-cidade.mp3-eea863c4eb9cbc9f8a50dd8a1c2190a0.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

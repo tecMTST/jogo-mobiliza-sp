@@ -9,7 +9,7 @@ onready var clipesSFX = {
 		preload ("res://elementos/audio/sfx/pop-2.mp3"),
 		preload ("res://elementos/audio/sfx/pop-3.mp3")
 	],
-	"mobilizar": preload ("res://elementos/audio/sfx/pop-simples.mp3")
+	"mobilizar": preload ("res://elementos/audio/sfx/ponto-entrega.mp3")
 }
 
 #Gerador de número randômico:
