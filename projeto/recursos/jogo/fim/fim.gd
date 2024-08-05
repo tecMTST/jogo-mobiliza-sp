@@ -1,6 +1,9 @@
 extends Node2D
 
 
+export var cena_jogo: PackedScene
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -11,5 +14,5 @@ func _ready():
 #	pass
 
 
-func _on_Temporizador_timeout():
-	TrocadorDeCenas.trocar_cena("res://recursos/jogo/fim/fim.tscn")
+func _on_TouchScreenButton_pressed():
+	TrocadorDeCenas.trocar_cena(cena_jogo.resource_path)

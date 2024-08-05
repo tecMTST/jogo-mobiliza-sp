@@ -564,7 +564,7 @@ position = Vector2( 95, -259 )
 
 [node name="Temporizador" type="Timer" parent="."]
 process_mode = 0
-wait_time = 10.0
+wait_time = 180.0
 one_shot = true
 autostart = true
 
@@ -577,3 +577,5 @@ bus = "BGM"
 stream = ExtResource( 11 )
 autoplay = true
 bus = "AMB"
+
+[connection signal="timeout" from="Temporizador" to="." method="_on_Temporizador_timeout"]

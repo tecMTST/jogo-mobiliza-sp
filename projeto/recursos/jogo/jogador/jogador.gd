@@ -7,7 +7,6 @@ extends KinematicBody2D
 # var b = "text"
 export (int) var multiplicador_velocidade := 300
 export (int) var maximo_seguidores := 5
-export (int) var tempo_segundos := 180
 export var loc_temporizador: NodePath
 export var pontos_de_habilidade := 0
 
@@ -31,11 +30,10 @@ func _ready():
 
 	texto_seguidores.maximo = maximo_seguidores
 
-	temporizador.wait_time = tempo_segundos
 	temporizador.autostart = false
 	temporizador.start()
 	
-	barra_tempo.max_value = tempo_segundos
+	barra_tempo.max_value = temporizador.wait_time
 	barra_tempo.value = temporizador.wait_time
 
 func quantidade_seguidores():

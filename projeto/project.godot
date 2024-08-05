@@ -99,7 +99,7 @@ _global_script_class_icons={
 [application]
 
 config/name="mobiliza"
-run/main_scene="res://recursos/jogo/mobiliza.tscn"
+run/main_scene="res://recursos/abertura/abertura.tscn"
 config/icon="res://elementos/imagem/icon.png"
 
 [audio]
