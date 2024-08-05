@@ -19,6 +19,12 @@ script = ExtResource( 5 )
 [node name="mapa" parent="." instance=ExtResource( 6 )]
 scale = Vector2( 4, 4 )
 
+[node name="Temporizador" type="Timer" parent="."]
+process_mode = 0
+wait_time = 180.0
+one_shot = true
+autostart = true
+
 [node name="YSort" type="YSort" parent="."]
 
 [node name="jogador" parent="YSort" instance=ExtResource( 1 )]
@@ -561,12 +567,6 @@ position = Vector2( 110, 265 )
 
 [node name="pessoa5" parent="YSort" instance=ExtResource( 3 )]
 position = Vector2( 95, -259 )
-
-[node name="Temporizador" type="Timer" parent="."]
-process_mode = 0
-wait_time = 180.0
-one_shot = true
-autostart = true
 
 [node name="AudioStreamBGM" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )

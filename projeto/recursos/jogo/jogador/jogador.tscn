@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://recursos/jogo/jogador/jogador.gd" type="Script" id=1]
 [ext_resource path="res://elementos/imagem/pessoas/branco.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://elementos/imagem/jogador/boulos_pressed.png" type="Texture" id=9]
 [ext_resource path="res://recursos/jogo/jogador/ToggleDebug.gd" type="Script" id=10]
 [ext_resource path="res://recursos/jogo/jogador/AudioStreamJogador.gd" type="Script" id=11]
+[ext_resource path="res://recursos/jogo/jogador/Texto.gd" type="Script" id=12]
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 12.0
@@ -75,6 +76,9 @@ animations = [ {
 } ]
 
 [sub_resource type="Theme" id=15]
+default_font = ExtResource( 4 )
+
+[sub_resource type="Theme" id=29]
 default_font = ExtResource( 4 )
 
 [sub_resource type="Theme" id=16]
@@ -193,12 +197,29 @@ playing = true
 position = Vector2( 0, -106 )
 
 [node name="TempoRestante" type="ProgressBar" parent="."]
-margin_left = -250.0
-margin_top = -650.0
-margin_right = 250.0
-margin_bottom = -600.0
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -243.0
+margin_top = -638.0
+margin_right = 257.0
+margin_bottom = -588.0
 theme = SubResource( 15 )
 percent_visible = false
+
+[node name="Texto" type="RichTextLabel" parent="TempoRestante"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -182.0
+margin_top = -27.0
+margin_right = 182.0
+margin_bottom = 65.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource( 29 )
+bbcode_enabled = true
+script = ExtResource( 12 )
 
 [node name="ContadorFPS" type="Label" parent="."]
 margin_left = -337.0

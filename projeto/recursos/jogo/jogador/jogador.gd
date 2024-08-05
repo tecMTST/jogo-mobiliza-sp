@@ -30,9 +30,6 @@ func _ready():
 
 	texto_seguidores.maximo = maximo_seguidores
 
-	temporizador.autostart = false
-	temporizador.start()
-	
 	barra_tempo.max_value = temporizador.wait_time
 	barra_tempo.value = temporizador.wait_time
 
