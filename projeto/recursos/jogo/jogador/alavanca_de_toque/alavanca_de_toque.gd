@@ -3,7 +3,7 @@ extends Node2D
 # abencoado seja o https://randommomentania.com/2018/08/godot-touch-screen-joystick-part-1/
 
 export var raio_tolerancia = 400
-export var modo_estatico = true
+export var modo_estatico = false
 
 signal alavanca_movida(posicao)
 signal alavanca_solta
