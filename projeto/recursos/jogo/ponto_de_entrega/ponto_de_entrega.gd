@@ -34,6 +34,8 @@ func _on_Area2D_body_entered(body: Jogador):
 	referencia_jogador = body
 	# if Global.modo_debug:
 	var a_transferir := min(referencia_jogador.quantidade_seguidores(), numero_de_pessoas)
+	if pessoas.size() >= numero_de_pessoas:
+		return
 	for i in range(a_transferir):
 		retirar_do_jogador(referencia_jogador)
 		texto.alterar_valor(pessoas.size())

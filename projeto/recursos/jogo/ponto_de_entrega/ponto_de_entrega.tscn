@@ -337,6 +337,8 @@ margin_bottom = 114.0
 step = 1.0
 
 [node name="texto_contador" parent="." instance=ExtResource( 4 )]
+z_index = 10
+z_as_relative = false
 
 [node name="Explosao" type="AnimatedSprite" parent="."]
 scale = Vector2( 6, 6 )
