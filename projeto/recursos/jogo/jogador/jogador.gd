@@ -5,22 +5,23 @@ extends KinematicBody2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-export (int) var multiplicador_velocidade := 300
-export (int) var maximo_seguidores := 5
+export var multiplicador_velocidade := 300
+export var maximo_seguidores := 5
 export var loc_temporizador: NodePath
 export var pontos_de_habilidade := 0
 
 onready var sprite = $SpritesJogador as AnimatedSprite
-onready var texto_seguidores = $texto_contador
+onready var texto_seguidores := $texto_contador
 onready var barra_tempo = $TempoRestante as ProgressBar
 onready var temporizador = get_node(loc_temporizador) as Timer
 onready var poeira = $Poeira as AnimatedSprite
 
-var aleatorio = RandomNumberGenerator.new()
-var _seguidores = []
-var velocidade = Vector2()
-var _movendo = false
-var jogador = true
+var aleatorio := RandomNumberGenerator.new()
+var _seguidores := []
+var velocidade := Vector2()
+var _movendo := false
+var jogador := true
+var total_entregues := 0
 
 signal atividade_player(tipo)
 
@@ -33,11 +34,16 @@ func _ready():
 	barra_tempo.max_value = temporizador.wait_time
 	barra_tempo.value = temporizador.wait_time
 
+func alterar_maximo_entregas(maximo: int):
+	$mobilizometro/mobilizometro.alterar_valor_maximo(maximo)
+
 func quantidade_seguidores():
 	return _seguidores.size()
 
 func retirar_seguidor():
 	$Animador.play("squish")
+	total_entregues += 1
+	$mobilizometro/mobilizometro.alterar_valor(total_entregues)
 	return _seguidores.pop_back()
 
 func adicionar_seguidor(seguidor):

@@ -1,6 +1,7 @@
 extends Node2D
 
 export var tempo: int = 180
+export var total_seguidores: int = 0
 
 onready var _temporizador: Timer = $Temporizador
 
@@ -9,6 +10,10 @@ func _ready():
 	_temporizador.wait_time = tempo
 	_temporizador.autostart = false
 	_temporizador.start()
+	for crianca in $YSort.get_children():
+		if 'pessoa' in crianca.name:
+			total_seguidores += 1
+	$YSort/jogador.alterar_maximo_entregas(total_seguidores)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
