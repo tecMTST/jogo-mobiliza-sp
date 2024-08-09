@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://elementos/imagem/ambiente/coisa/Road Signs/Sign Attention.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 9, 8 )
+
+[node name="sinal_tipo1" type="StaticBody2D"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -2 )
+shape = SubResource( 2 )
+
+[node name="SignAttention" type="Sprite" parent="."]
+position = Vector2( 0, -54 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 1 )

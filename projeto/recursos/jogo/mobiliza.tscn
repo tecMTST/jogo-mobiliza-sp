@@ -1,7 +1,7 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://recursos/jogo/jogador/jogador.tscn" type="PackedScene" id=1]
-[ext_resource path="res://recursos/jogo/predio/predio.tscn" type="PackedScene" id=2]
+[ext_resource path="res://recursos/jogo/coisas/arvore.tscn" type="PackedScene" id=2]
 [ext_resource path="res://recursos/jogo/pessoa/pessoa.tscn" type="PackedScene" id=3]
 [ext_resource path="res://elementos/audio/bgm/bgm-coracao.mp3" type="AudioStream" id=4]
 [ext_resource path="res://recursos/jogo/mobiliza.gd" type="Script" id=5]
@@ -11,6 +11,9 @@
 [ext_resource path="res://elementos/imagem/pontos/tenda.png" type="Texture" id=9]
 [ext_resource path="res://elementos/imagem/pontos/ato.png" type="Texture" id=10]
 [ext_resource path="res://elementos/audio/bgm/amb-cidade.mp3" type="AudioStream" id=11]
+[ext_resource path="res://elementos/imagem/ambiente/coisa/weed01.png" type="Texture" id=12]
+[ext_resource path="res://elementos/imagem/ambiente/coisa/weed02.png" type="Texture" id=13]
+[ext_resource path="res://elementos/imagem/ambiente/coisa/decals/crack-decal-11x11-01.png" type="Texture" id=14]
 
 [node name="mobiliza" type="Node2D"]
 position = Vector2( 1, 0 )
@@ -18,6 +21,21 @@ script = ExtResource( 5 )
 
 [node name="mapa" parent="." instance=ExtResource( 6 )]
 scale = Vector2( 4, 4 )
+
+[node name="no_chao" type="Node2D" parent="."]
+scale = Vector2( 3, 3 )
+
+[node name="Weed01" type="Sprite" parent="no_chao"]
+position = Vector2( -37.6667, 6.33333 )
+texture = ExtResource( 12 )
+
+[node name="Weed02" type="Sprite" parent="no_chao"]
+position = Vector2( -39.6667, -20 )
+texture = ExtResource( 13 )
+
+[node name="Crack-decal-11X11-01" type="Sprite" parent="no_chao"]
+position = Vector2( -55.6667, 11.6667 )
+texture = ExtResource( 14 )
 
 [node name="Temporizador" type="Timer" parent="."]
 process_mode = 0
@@ -36,9 +54,6 @@ position = Vector2( 250, -254 )
 
 [node name="predio2" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( -263, -251 )
-
-[node name="predio3" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( -267, 255 )
 
 [node name="predio4" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 258, 263 )

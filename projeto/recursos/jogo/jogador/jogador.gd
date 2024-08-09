@@ -41,7 +41,6 @@ func quantidade_seguidores():
 	return _seguidores.size()
 
 func retirar_seguidor():
-	$Animador.play("squish")
 	total_entregues += 1
 	$mobilizometro/mobilizometro.alterar_valor(total_entregues)
 	return _seguidores.pop_back()
@@ -59,17 +58,6 @@ func remover_seguidor(seguidor):
 	return seguidor
 
 func get_input():
-	velocidade = Vector2()
-	if Input.is_action_pressed("right"):
-		sprite.scale.x = 1
-		velocidade.x += 1
-	if Input.is_action_pressed("left"):
-		sprite.scale.x = -1
-		velocidade.x -= 1
-	if Input.is_action_pressed("down"):
-		velocidade.y += 1
-	if Input.is_action_pressed("up"):
-		velocidade.y -= 1
 	velocidade = velocidade.normalized() * multiplicador_velocidade
 
 func _process(delta):
