@@ -1,7 +1,7 @@
 extends Node2D
 
 
-export var numero_de_pessoas = 15
+export var numero_de_pessoas := 15
 export var textura: Texture
 # aumento do numero maximo de pessoas
 export var recompensa := 0
