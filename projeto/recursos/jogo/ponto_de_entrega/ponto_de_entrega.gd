@@ -1,7 +1,7 @@
 extends Node2D
 
 
-export var numero_de_pessoas = 15
+export var numero_de_pessoas := 15
 export var textura: Texture
 # aumento do numero maximo de pessoas
 export var recompensa := 0
@@ -32,10 +32,9 @@ func _process(delta):
 
 func _on_Area2D_body_entered(body: Jogador):
 	referencia_jogador = body
-	# if Global.modo_debug:
-	var a_transferir := min(referencia_jogador.quantidade_seguidores(), numero_de_pessoas)
-	if pessoas.size() >= numero_de_pessoas:
-		return
+	var faltando := numero_de_pessoas - pessoas.size()
+	var a_transferir := min(referencia_jogador.quantidade_seguidores(), faltando)
+
 	for i in range(a_transferir):
 		retirar_do_jogador(referencia_jogador)
 		texto.alterar_valor(pessoas.size())
