@@ -11,7 +11,7 @@ export var rankings: Array = [
 ]
 
 
-onready var progresso := $ProgressBar
+onready var progresso := $TextureProgress
 onready var texto := $Texto as RichTextLabel
 
 

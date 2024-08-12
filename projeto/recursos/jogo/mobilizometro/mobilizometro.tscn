@@ -15,10 +15,6 @@ anchor_right = 0.5
 anchor_bottom = 1.0
 script = ExtResource( 1 )
 
-[node name="MobilizometroFill" type="Sprite" parent="."]
-position = Vector2( -44, -401 )
-texture = ExtResource( 3 )
-
 [node name="ProgressBar" type="ProgressBar" parent="."]
 visible = false
 anchor_left = 0.5
