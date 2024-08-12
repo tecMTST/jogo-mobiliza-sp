@@ -37,7 +37,7 @@ func _ready():
 func alterar_maximo_entregas(maximo: int):
 	$mobilizometro/mobilizometro.alterar_valor_maximo(maximo)
 
-func quantidade_seguidores():
+func quantidade_seguidores() -> int:
 	return _seguidores.size()
 
 func retirar_seguidor():
