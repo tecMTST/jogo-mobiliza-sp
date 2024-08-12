@@ -4,8 +4,8 @@ extends Control
 export var valor_maximo := 100
 # valor corresponde ao numero maximo de entregas para continuar sendo do ranking
 export var rankings: Array = [
-	{ valor = 5, titulo = 'Panfleteiro' },
-	{ valor = 20, titulo = 'Mobilizador' },
+	{ valor = 5, titulo = 'Panfleteiro', tint = Color(1, 0, 0) },
+	{ valor = 20, titulo = 'Mobilizador', tint = Color(.5, 0, 0) },
 	{ valor = 50, titulo = 'Coordenador de Banca' },
 	{ valor = 1000, titulo = 'Lider de Grupo' },
 ]
