@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://recursos/jogo/jogador/jogador.tscn" type="PackedScene" id=1]
 [ext_resource path="res://recursos/jogo/coisas/arvore.tscn" type="PackedScene" id=2]
@@ -25,6 +25,12 @@
 [ext_resource path="res://recursos/jogo/coisas/sinal_tipo_3.tscn" type="PackedScene" id=23]
 [ext_resource path="res://recursos/jogo/coisas/carro_tipo1.tscn" type="PackedScene" id=24]
 [ext_resource path="res://recursos/jogo/coisas/predio.tscn" type="PackedScene" id=25]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 62.5, 2142 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 2103, 50.5 )
 
 [node name="mobiliza" type="Node2D"]
 position = Vector2( 1, 0 )
@@ -813,5 +819,37 @@ bus = "BGM"
 stream = ExtResource( 11 )
 autoplay = true
 bus = "AMB"
+
+[node name="parede_esquerda" type="StaticBody2D" parent="."]
+position = Vector2( -2100, 0 )
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="parede_esquerda"]
+position = Vector2( -20.5, 25 )
+shape = SubResource( 1 )
+
+[node name="parede_direita" type="StaticBody2D" parent="."]
+position = Vector2( 2100, 0 )
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="parede_direita"]
+position = Vector2( 20, 27 )
+shape = SubResource( 1 )
+
+[node name="parede_baixo" type="StaticBody2D" parent="."]
+position = Vector2( 0, 2100 )
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="parede_baixo"]
+position = Vector2( 11, 45.5 )
+shape = SubResource( 2 )
+
+[node name="parede_cima" type="StaticBody2D" parent="."]
+position = Vector2( 0, -2100 )
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="parede_cima"]
+position = Vector2( 11, -10.5 )
+shape = SubResource( 2 )
 
 [connection signal="timeout" from="Temporizador" to="." method="_on_Temporizador_timeout"]
