@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hand.png-2143861ba6e6ab3dc411f5ce5c6a1125.stex"
+path="res://.import/Linha_stroke.png-caf0b3f81da15f1b9107e53924e55707.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://elementos/imagem/partes/hand.png"
-dest_files=[ "res://.import/hand.png-2143861ba6e6ab3dc411f5ce5c6a1125.stex" ]
+source_file="res://elementos/imagem/jogador/Linha_stroke.png"
+dest_files=[ "res://.import/Linha_stroke.png-caf0b3f81da15f1b9107e53924e55707.stex" ]
 
 [params]
 

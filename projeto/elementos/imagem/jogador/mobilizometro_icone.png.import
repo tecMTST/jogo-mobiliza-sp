@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/body_back.png-9203a7b00a1972a06c1772358e6984c7.stex"
+path="res://.import/mobilizometro_icone.png-f057f72bcbafe8a2bab9e5c81f1314af.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://elementos/imagem/partes/body_back.png"
-dest_files=[ "res://.import/body_back.png-9203a7b00a1972a06c1772358e6984c7.stex" ]
+source_file="res://elementos/imagem/jogador/mobilizometro_icone.png"
+dest_files=[ "res://.import/mobilizometro_icone.png-f057f72bcbafe8a2bab9e5c81f1314af.stex" ]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://elementos/fontes/roboto.tres" type="DynamicFont" id=1]
+[ext_resource path="res://elementos/fontes/anton.tres" type="DynamicFont" id=1]
 [ext_resource path="res://recursos/jogo/texto_contador/texto_contador.gd" type="Script" id=2]
 
 [sub_resource type="Theme" id=1]

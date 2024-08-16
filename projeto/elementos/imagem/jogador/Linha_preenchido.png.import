@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/body_front.png-6c650f6d61aa69a5045a72258538b654.stex"
+path="res://.import/Linha_preenchido.png-8cd59d9a38d99e7eb966046b6621a6fe.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://elementos/imagem/partes/body_front.png"
-dest_files=[ "res://.import/body_front.png-6c650f6d61aa69a5045a72258538b654.stex" ]
+source_file="res://elementos/imagem/jogador/Linha_preenchido.png"
+dest_files=[ "res://.import/Linha_preenchido.png-8cd59d9a38d99e7eb966046b6621a6fe.stex" ]
 
 [params]
 

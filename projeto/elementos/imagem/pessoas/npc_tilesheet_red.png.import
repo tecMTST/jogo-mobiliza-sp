@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/expandir_selecionado.png-44653c43c7b968793edb848724cf4502.stex"
+path="res://.import/npc_tilesheet_red.png-4eeb0fc064a9576b39fddd25283697ba.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://elementos/imagem/jogador/menu/expandir_selecionado.png"
-dest_files=[ "res://.import/expandir_selecionado.png-44653c43c7b968793edb848724cf4502.stex" ]
+source_file="res://elementos/imagem/pessoas/npc_tilesheet_red.png"
+dest_files=[ "res://.import/npc_tilesheet_red.png-4eeb0fc064a9576b39fddd25283697ba.stex" ]
 
 [params]
 

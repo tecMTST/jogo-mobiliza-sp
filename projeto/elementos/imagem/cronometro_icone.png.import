@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/subir_habilidade.png-1ba9b54774f69fd179dbeffa2bb35d0d.stex"
+path="res://.import/cronometro_icone.png-c3f6819f6cb103ffda6a57cc39ec4440.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://elementos/imagem/jogador/menu/subir_habilidade.png"
-dest_files=[ "res://.import/subir_habilidade.png-1ba9b54774f69fd179dbeffa2bb35d0d.stex" ]
+source_file="res://elementos/imagem/cronometro_icone.png"
+dest_files=[ "res://.import/cronometro_icone.png-c3f6819f6cb103ffda6a57cc39ec4440.stex" ]
 
 [params]
 

@@ -1,7 +1,7 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://recursos/jogo/jogador/jogador.gd" type="Script" id=1]
-[ext_resource path="res://elementos/imagem/pessoas/moca_azul.png" type="Texture" id=2]
+[ext_resource path="res://elementos/imagem/jogador/female_tilesheet.png" type="Texture" id=2]
 [ext_resource path="res://elementos/imagem/smoke.png" type="Texture" id=3]
 [ext_resource path="res://elementos/fontes/roboto.tres" type="DynamicFont" id=4]
 [ext_resource path="res://recursos/jogo/jogador/alavanca_de_toque/alavanca_de_toque.tscn" type="PackedScene" id=5]
@@ -13,6 +13,8 @@
 [ext_resource path="res://recursos/jogo/jogador/AudioStreamJogador.gd" type="Script" id=11]
 [ext_resource path="res://recursos/jogo/jogador/Texto.gd" type="Script" id=12]
 [ext_resource path="res://recursos/jogo/mobilizometro/mobilizometro.tscn" type="PackedScene" id=13]
+[ext_resource path="res://elementos/imagem/cronometro_icone.png" type="Texture" id=14]
+[ext_resource path="res://elementos/fontes/anton.tres" type="DynamicFont" id=15]
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 12.0
@@ -22,7 +24,7 @@ height = 0.0
 default_font = ExtResource( 4 )
 
 [sub_resource type="Theme" id=29]
-default_font = ExtResource( 4 )
+default_font = ExtResource( 15 )
 
 [sub_resource type="Theme" id=16]
 default_font = ExtResource( 4 )
@@ -79,31 +81,47 @@ animations = [ {
 [sub_resource type="CircleShape2D" id=28]
 radius = 153.584
 
-[sub_resource type="AtlasTexture" id=30]
+[sub_resource type="AtlasTexture" id=37]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 110, 80, 110 )
 
-[sub_resource type="AtlasTexture" id=31]
+[sub_resource type="AtlasTexture" id=38]
 atlas = ExtResource( 2 )
 region = Rect2( 80, 110, 80, 110 )
 
-[sub_resource type="AtlasTexture" id=32]
+[sub_resource type="AtlasTexture" id=39]
+atlas = ExtResource( 2 )
+region = Rect2( 160, 110, 80, 110 )
+
+[sub_resource type="AtlasTexture" id=40]
+atlas = ExtResource( 2 )
+region = Rect2( 240, 110, 80, 110 )
+
+[sub_resource type="AtlasTexture" id=34]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 110, 80, 110 )
+
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 2 )
+region = Rect2( 80, 110, 80, 110 )
+
+[sub_resource type="AtlasTexture" id=36]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 80, 110 )
 
 [sub_resource type="SpriteFrames" id=13]
 animations = [ {
-"frames": [ SubResource( 30 ), SubResource( 31 ) ],
+"frames": [ SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ) ],
 "loop": true,
 "name": "andar",
-"speed": 10.0
+"speed": 15.0
 }, {
-"frames": [ SubResource( 30 ), SubResource( 31 ) ],
+"frames": [ SubResource( 34 ), SubResource( 35 ) ],
 "loop": true,
 "name": "correr",
 "speed": 15.0
 }, {
-"frames": [ SubResource( 32 ) ],
+"frames": [ SubResource( 36 ) ],
 "loop": true,
 "name": "parar",
 "speed": 5.0
@@ -136,9 +154,9 @@ position = Vector2( 0, -106 )
 [node name="TempoRestante" type="ProgressBar" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -243.0
+margin_left = -232.0
 margin_top = -638.0
-margin_right = 257.0
+margin_right = 268.0
 margin_bottom = -588.0
 theme = SubResource( 15 )
 percent_visible = false
@@ -148,15 +166,23 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -182.0
-margin_top = -27.0
-margin_right = 182.0
-margin_bottom = 65.0
+margin_left = -254.0
+margin_top = -53.0
+margin_right = 110.0
+margin_bottom = 39.0
 grow_horizontal = 2
 grow_vertical = 2
+rect_scale = Vector2( 1.4, 1.4 )
 theme = SubResource( 29 )
 bbcode_enabled = true
+bbcode_text = "[center]AA[/center]"
+text = "AA"
 script = ExtResource( 12 )
+
+[node name="CronometroIcone" type="Sprite" parent="TempoRestante"]
+position = Vector2( -3, 21 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 14 )
 
 [node name="ContadorFPS" type="Label" parent="."]
 margin_left = -337.0

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/aumentar_selecionado.png-a3bd798d649892232b368a1d26f07e5e.stex"
+path="res://.import/female_tilesheet.png-4da19192d0802203a3fe824aab8c182e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://elementos/imagem/jogador/menu/aumentar_selecionado.png"
-dest_files=[ "res://.import/aumentar_selecionado.png-a3bd798d649892232b368a1d26f07e5e.stex" ]
+source_file="res://elementos/imagem/jogador/female_tilesheet.png"
+dest_files=[ "res://.import/female_tilesheet.png-4da19192d0802203a3fe824aab8c182e.stex" ]
 
 [params]
 
