@@ -41,9 +41,12 @@ func quantidade_seguidores() -> int:
 	return _seguidores.size()
 
 func retirar_seguidor():
+	var seguidor_entregue = _seguidores.pop_back()
+	if seguidor_entregue == null:
+		return null
 	total_entregues += 1
 	$mobilizometro/mobilizometro.alterar_valor(total_entregues)
-	return _seguidores.pop_back()
+	return seguidor_entregue
 
 func adicionar_seguidor(seguidor):
 	if _seguidores.size() >= maximo_seguidores:

@@ -1,12 +1,13 @@
 extends Node2D
 
-export var tempo: int = 180
+export var tempo: int = 100
 export var total_seguidores: int = 0
 
 onready var _temporizador: Timer = $Temporizador
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.tempo_total = tempo
 	_temporizador.wait_time = tempo
 	_temporizador.autostart = false
 	_temporizador.start()
@@ -22,4 +23,6 @@ func _process(delta):
 
 
 func _on_Temporizador_timeout():
+	Global.total_pessoas = total_seguidores
+	Global.pessoas_mobilizadas = $YSort/jogador.total_entregues
 	TrocadorDeCenas.trocar_cena("res://recursos/jogo/fim/fim.tscn")
