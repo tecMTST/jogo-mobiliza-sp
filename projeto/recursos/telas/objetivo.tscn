@@ -2,9 +2,9 @@
 
 [ext_resource path="res://elementos/fontes/anton.tres" type="DynamicFont" id=1]
 [ext_resource path="res://recursos/telas/inicio.gd" type="Script" id=2]
-[ext_resource path="res://elementos/imagem/tutorial/tutorial-4.png" type="Texture" id=3]
-[ext_resource path="res://elementos/imagem/tutorial/tutorial-3.png" type="Texture" id=4]
-[ext_resource path="res://recursos/telas/objetivo.tscn" type="PackedScene" id=5]
+[ext_resource path="res://recursos/telas/vamos.tscn" type="PackedScene" id=3]
+[ext_resource path="res://elementos/imagem/tutorial/tutorial-5.png" type="Texture" id=4]
+[ext_resource path="res://elementos/imagem/tutorial/tutorial-6.png" type="Texture" id=5]
 [ext_resource path="res://elementos/imagem/campanha/coracao-colorido.png" type="Texture" id=6]
 
 [sub_resource type="Theme" id=5]
@@ -18,7 +18,7 @@ anchor_bottom = 0.5
 margin_top = 32.0
 margin_bottom = 32.0
 script = ExtResource( 2 )
-proxima_cena = ExtResource( 5 )
+proxima_cena = ExtResource( 3 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 anchor_left = 0.5
@@ -26,25 +26,25 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -313.0
-margin_top = -603.0
+margin_top = -621.0
 margin_right = 313.0
-margin_bottom = 459.0
+margin_bottom = 523.0
 theme = SubResource( 5 )
 bbcode_enabled = true
 bbcode_text = "[center]
-PARA MOVIMENTAR A PERSONAGEM, TOQUE EM QUALQUER LUGAR DA TELA E ARRASTE PARA A POSIÇÃO QUE DESEJA IR.
+ENCONTRE AS PESSOAS QUE NÃO ESTÃO MOBILIZADAS E PASSE POR ELAS PARA ENGAJÁ-LAS!
+
+
+
+MAS CUIDADO! VOCÊ TERÁ UM LIMITE MÁXIMO DE SEGUIDORES!
 [/center]"
 text = "
-PARA MOVIMENTAR A PERSONAGEM, TOQUE EM QUALQUER LUGAR DA TELA E ARRASTE PARA A POSIÇÃO QUE DESEJA IR.
+ENCONTRE AS PESSOAS QUE NÃO ESTÃO MOBILIZADAS E PASSE POR ELAS PARA ENGAJÁ-LAS!
+
+
+
+MAS CUIDADO! VOCÊ TERÁ UM LIMITE MÁXIMO DE SEGUIDORES!
 "
-
-[node name="Tutorial-4" type="Sprite" parent="."]
-position = Vector2( 5, 249 )
-texture = ExtResource( 3 )
-
-[node name="Tutorial-3" type="Sprite" parent="."]
-position = Vector2( -3, 18 )
-texture = ExtResource( 4 )
 
 [node name="Continuar" type="RichTextLabel" parent="."]
 anchor_left = 0.5
@@ -69,3 +69,11 @@ TOQUE NA TELA PARA CONTINUAR
 position = Vector2( 188, 518 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 6 )
+
+[node name="Tutorial-5" type="Sprite" parent="."]
+position = Vector2( 0, -217 )
+texture = ExtResource( 4 )
+
+[node name="Tutorial-6" type="Sprite" parent="."]
+position = Vector2( -1, 170 )
+texture = ExtResource( 5 )

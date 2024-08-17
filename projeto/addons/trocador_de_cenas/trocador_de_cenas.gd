@@ -7,8 +7,8 @@ signal transicao_entrada_concluida
 
 const OPCOES_PADRAO := {
 	"cor_de_fundo": Color("#000000"),
-	"tempo_espera_transicao": 0.5,
-	"velocidade_transicao": 2,
+	"tempo_espera_transicao": 0.1,
+	"velocidade_transicao": 10,
 	"pular_transicao_saida": false,
 	"transicao_saida": "fade",
 	# "padrao_transicao_saida": null,

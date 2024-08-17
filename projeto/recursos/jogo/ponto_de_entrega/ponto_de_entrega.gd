@@ -55,6 +55,8 @@ func retirar_do_jogador(jogador: Jogador):
 		referencia_jogador.pontos_de_habilidade += 1
 		$Explosao.play("parabens")
 		emit_signal("atividade_ponto",numero_de_pessoas,"final")
+		$texto_contador/c_colorido.visible = true
+		$texto_contador/c_preto.visible = false
 		referencia_jogador.aumentar_maximo_seguidores(recompensa)
 	novo_seguidor.mobilizar(self)
 
