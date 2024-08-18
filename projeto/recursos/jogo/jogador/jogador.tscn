@@ -221,7 +221,6 @@ script = ExtResource( 11 )
 
 [node name="SpritesJogador" type="AnimatedSprite" parent="."]
 position = Vector2( -0.12499, -46.2031 )
-scale = Vector2( 0.903125, 0.903125 )
 frames = SubResource( 13 )
 animation = "parar"
 playing = true
