@@ -6,8 +6,9 @@ export var valor_maximo := 100
 export var rankings: Array = [
 	{ valor = 5, titulo = 'PANFLETEIRO', tint = Color(1, 0, 0) },
 	{ valor = 20, titulo = 'MOBILIZADOR', tint = Color(.5, 0, 0) },
-	{ valor = 50, titulo = 'COORD. DE BANCA' },
-	{ valor = 1000, titulo = 'LÍDER DE GRUPO' },
+	{ valor = 75, titulo = 'COORD. DE BANCA' },
+	{ valor = 125, titulo = 'LÍDER DE GRUPO' },
+	{ valor = 1000, titulo = 'MOBILIZAÇÃO TOTAL!' }
 ]
 
 
