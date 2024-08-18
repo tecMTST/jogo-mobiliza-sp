@@ -378,7 +378,7 @@ scale = Vector2( 6, 6 )
 frames = SubResource( 73 )
 
 [node name="AudioStreamPonto" type="AudioStreamPlayer2D" parent="."]
-attenuation = 4.0
+attenuation = 1.68179
 panning_strength = 2.0
 bus = "SFX PONTO"
 script = ExtResource( 6 )

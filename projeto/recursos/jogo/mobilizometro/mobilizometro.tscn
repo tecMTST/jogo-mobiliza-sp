@@ -31,10 +31,10 @@ margin_bottom = -41.0
 percent_visible = false
 
 [node name="Texto" type="RichTextLabel" parent="."]
-margin_left = -300.0
-margin_top = -203.0
-margin_right = 300.0
-margin_bottom = -127.0
+margin_left = -279.0
+margin_top = -180.0
+margin_right = 321.0
+margin_bottom = -104.0
 theme = ExtResource( 2 )
 bbcode_enabled = true
 bbcode_text = "OK"
@@ -55,6 +55,6 @@ texture_over = ExtResource( 3 )
 texture_progress = ExtResource( 4 )
 
 [node name="MobilizometroIcone" type="Sprite" parent="."]
-position = Vector2( -280, -67 )
+position = Vector2( -280, -69 )
 scale = Vector2( 0.107991, 0.107991 )
 texture = ExtResource( 6 )

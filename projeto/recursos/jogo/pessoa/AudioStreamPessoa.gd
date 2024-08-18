@@ -20,6 +20,7 @@ func _ready():
 	pass # Replace with function body.
 
 func _on_pessoa_atividade_npc(tipo):
+	rng.randomize()
 	if tipo == "seguindo":
 		stop()
 		stream = clipesSFX.seguir[rng.randf_range(0, clipesSFX.seguir.size())]

@@ -13,9 +13,9 @@ func _ready():
 	var pontuacao := Global.pessoas_mobilizadas
 	var bb_texto := """[center]
 
-Poxa, você só conseguiu mobilizar [color=red]{pon}[/color] pessoas :(
+POXA, VOCÊ CONSEGUIU MOBILIZAR SOMENTE [color=red]{pon}[/color] PESSOAS :(
 
-Tente jogar novamente e mobilizar mais pessoas para os eventos![/center]"""
+TENTE JOGAR NOVAMENTE MOBILIZANDO AS PESSOAS NOS EVENTOS![/center]"""
 
 	if porcentagem_completo <= .05:
 		$BaixarAplicativo.visible = false
@@ -23,24 +23,24 @@ Tente jogar novamente e mobilizar mais pessoas para os eventos![/center]"""
 	if .05 < porcentagem_completo and porcentagem_completo < .9:
 		bb_texto = """[center]Parabéns!
 
-Você conseguiu mobilizar [color=red]{pon}[/color] pessoas!
-Chegou a hora de mobilizar a cidade toda [color=red]pra valer[/color]!
-[color=red]Toque no coração[/color] para baixar o aplicativo [color=red]Mobiliza SP[/color]![/center]"""
+VOCÊ CONSEGUIU MOBILIZAR [color=red]{pon}[/color] PESSOAS!
+CHEGOU A HORA DE MOBILIZAR A CIDADE TODA [color=red]PRA VALER[/color]!
+[color=red]TOQUE NO CORAÇÃO[/color] PARA BAIXAR O APLICATIVO [color=red]MOBILIZA SP[/color]![/center]"""
 
 	elif porcentagem_completo >= .9:
 		bb_texto = """[center]Uau!
 
-Você conseguiu mobilizar [color=red]{pon}[/color] pessoas!
-Com todo esse potencial para mobilizar, chegou a hora de colocar essas habilidades na [color=red]vida real[/color]!
-[color=red]Toque no coração[/color] para baixar o aplicativo [color=red]Mobiliza SP[/color]![/center]"""
+VOCÊ CONSEGUIU MOBILIZAR [color=red]{pon}[/color] PESSOAS!
+COM TODO ESSE POTENCIAL, CHEGOU A HORA DE COLOCAR SUAS HABILIDADES NA [color=red]VIDA REAL[/color]!
+[color=red]TOQUE NO CORAÇÃO[/color] PARA BAIXAR O APLICATIVO [color=red]MOBILIZA SP[/color]![/center]"""
 
 	if Global.pessoas_mobilizadas == Global.total_pessoas:
 		pontuacao = Global.tempo_total - Global.tempo_restante
-		bb_texto = """[center]Excelente!
+		bb_texto = """[center]EXCELENTE!
 
-Você mobilizou a [color=red]CIDADE TODA[/color] em [color=red]{pon}[/color] segundos!
-Coloque todo esse potencial mobilizador para melhorar a cidade pra valer!
-[color=red]Toque no coração[/color] para baixar o aplicativo [color=red]Mobiliza SP[/color]![/center]"""
+VOCÊ MOBILIZOU [color=red]CIDADE TODA[/color] EM [color=red]{pon}[/color] SEGUNDOS!
+COLOQUE TODO O SEU POTENCIAL PARA MOBILIZAR A CIDADE [color=red]PRA VALER[/color]!
+[color=red]TOQUE NO CORAÇÃO[/color] PARA BAIXAR O APLICATIVO [color=red]MOBILIZA SP[/color]![/center]"""
 
 	texto.bbcode_text = bb_texto.format({'pon': pontuacao})
 

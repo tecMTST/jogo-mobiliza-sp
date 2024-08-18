@@ -3,7 +3,6 @@
 [ext_resource path="res://recursos/jogo/jogador/jogador.tscn" type="PackedScene" id=1]
 [ext_resource path="res://recursos/jogo/coisas/arvore.tscn" type="PackedScene" id=2]
 [ext_resource path="res://recursos/jogo/pessoa/pessoa.tscn" type="PackedScene" id=3]
-[ext_resource path="res://elementos/audio/bgm/bgm-coracao.mp3" type="AudioStream" id=4]
 [ext_resource path="res://recursos/jogo/mobiliza.gd" type="Script" id=5]
 [ext_resource path="res://recursos/jogo/mapa/mapa.tscn" type="PackedScene" id=6]
 [ext_resource path="res://recursos/jogo/ponto_de_entrega/ponto_de_entrega.tscn" type="PackedScene" id=7]
@@ -25,6 +24,7 @@
 [ext_resource path="res://recursos/jogo/coisas/sinal_tipo_3.tscn" type="PackedScene" id=23]
 [ext_resource path="res://recursos/jogo/coisas/carro_tipo1.tscn" type="PackedScene" id=24]
 [ext_resource path="res://recursos/jogo/coisas/predio.tscn" type="PackedScene" id=25]
+[ext_resource path="res://recursos/jogo/AudioStreamBGM.gd" type="Script" id=26]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 62.5, 2142 )
@@ -43,15 +43,119 @@ scale = Vector2( 4, 4 )
 scale = Vector2( 3, 3 )
 
 [node name="Weed01" type="Sprite" parent="no_chao"]
-position = Vector2( -37.6667, 6.33333 )
+position = Vector2( -241.667, -154.667 )
+texture = ExtResource( 12 )
+
+[node name="Weed13" type="Sprite" parent="no_chao"]
+position = Vector2( -652.667, -309.333 )
+texture = ExtResource( 12 )
+
+[node name="Weed14" type="Sprite" parent="no_chao"]
+position = Vector2( 635.333, -294.333 )
+texture = ExtResource( 12 )
+
+[node name="Weed15" type="Sprite" parent="no_chao"]
+position = Vector2( 448.667, 358 )
+texture = ExtResource( 12 )
+
+[node name="Weed16" type="Sprite" parent="no_chao"]
+position = Vector2( -573.333, 473 )
+texture = ExtResource( 12 )
+
+[node name="Weed17" type="Sprite" parent="no_chao"]
+position = Vector2( 73.3334, 542.667 )
 texture = ExtResource( 12 )
 
 [node name="Weed02" type="Sprite" parent="no_chao"]
-position = Vector2( -39.6667, -20 )
+position = Vector2( 266.333, -292.333 )
+texture = ExtResource( 13 )
+
+[node name="Weed03" type="Sprite" parent="no_chao"]
+position = Vector2( 362.667, -640.333 )
+texture = ExtResource( 13 )
+
+[node name="Weed04" type="Sprite" parent="no_chao"]
+position = Vector2( -271.667, -522.667 )
+texture = ExtResource( 13 )
+
+[node name="Weed05" type="Sprite" parent="no_chao"]
+position = Vector2( 143, -190 )
+texture = ExtResource( 13 )
+
+[node name="Weed06" type="Sprite" parent="no_chao"]
+position = Vector2( 585, -57 )
+texture = ExtResource( 13 )
+
+[node name="Weed07" type="Sprite" parent="no_chao"]
+position = Vector2( 364, 305.333 )
+texture = ExtResource( 13 )
+
+[node name="Weed08" type="Sprite" parent="no_chao"]
+position = Vector2( 329.667, 497.667 )
+texture = ExtResource( 13 )
+
+[node name="Weed09" type="Sprite" parent="no_chao"]
+position = Vector2( -450.667, 390.667 )
+texture = ExtResource( 13 )
+
+[node name="Weed10" type="Sprite" parent="no_chao"]
+position = Vector2( -421, 650.667 )
+texture = ExtResource( 13 )
+
+[node name="Weed11" type="Sprite" parent="no_chao"]
+position = Vector2( -380.667, 270.667 )
+texture = ExtResource( 13 )
+
+[node name="Weed12" type="Sprite" parent="no_chao"]
+position = Vector2( -454.333, -165.333 )
 texture = ExtResource( 13 )
 
 [node name="Crack-decal-11X11-01" type="Sprite" parent="no_chao"]
-position = Vector2( -55.6667, 11.6667 )
+position = Vector2( -60.6667, 26.3334 )
+texture = ExtResource( 14 )
+
+[node name="Crack-decal-11X11-02" type="Sprite" parent="no_chao"]
+position = Vector2( -290.333, -54 )
+texture = ExtResource( 14 )
+
+[node name="Crack-decal-11X11-03" type="Sprite" parent="no_chao"]
+position = Vector2( 594.333, -46.6667 )
+texture = ExtResource( 14 )
+
+[node name="Crack-decal-11X11-04" type="Sprite" parent="no_chao"]
+position = Vector2( 314.333, 281 )
+texture = ExtResource( 14 )
+
+[node name="Crack-decal-11X11-05" type="Sprite" parent="no_chao"]
+position = Vector2( -431, 144.667 )
+texture = ExtResource( 14 )
+
+[node name="Crack-decal-11X11-06" type="Sprite" parent="no_chao"]
+position = Vector2( -375.667, 634 )
+texture = ExtResource( 14 )
+
+[node name="Crack-decal-11X11-07" type="Sprite" parent="no_chao"]
+position = Vector2( 124.333, 653.333 )
+texture = ExtResource( 14 )
+
+[node name="Crack-decal-11X11-08" type="Sprite" parent="no_chao"]
+position = Vector2( -118, 228.333 )
+texture = ExtResource( 14 )
+
+[node name="Crack-decal-11X11-09" type="Sprite" parent="no_chao"]
+position = Vector2( -436.667, 47 )
+texture = ExtResource( 14 )
+
+[node name="Crack-decal-11X11-10" type="Sprite" parent="no_chao"]
+position = Vector2( -303.333, -374.667 )
+texture = ExtResource( 14 )
+
+[node name="Crack-decal-11X11-11" type="Sprite" parent="no_chao"]
+position = Vector2( 55, -565 )
+texture = ExtResource( 14 )
+
+[node name="Crack-decal-11X11-12" type="Sprite" parent="no_chao"]
+position = Vector2( 415, -221 )
 texture = ExtResource( 14 )
 
 [node name="Temporizador" type="Timer" parent="."]
@@ -814,9 +918,9 @@ position = Vector2( -1521, 2023 )
 position = Vector2( -584, 932 )
 
 [node name="AudioStreamBGM" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 4 )
 autoplay = true
 bus = "BGM"
+script = ExtResource( 26 )
 
 [node name="AudioStreamAMB" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )

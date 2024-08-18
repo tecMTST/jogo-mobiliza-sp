@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bgm-vinheta-inicio.mp3-d691379332ae55e3958dd9d093f03931.mp3str"
+
+[deps]
+
+source_file="res://elementos/audio/bgm/bgm-vinheta-inicio.mp3"
+dest_files=[ "res://.import/bgm-vinheta-inicio.mp3-d691379332ae55e3958dd9d093f03931.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
