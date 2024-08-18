@@ -5,8 +5,7 @@ onready var clipesSFX = {
 	"vinhetas": [
 		preload ("res://elementos/audio/bgm/bgm-vinheta-1.mp3"),
 		preload ("res://elementos/audio/bgm/bgm-vinheta-2.mp3"),
-		preload ("res://elementos/audio/bgm/bgm-vinheta-3.mp3"),
-		preload ("res://elementos/audio/bgm/bgm-vinheta-4.mp3")
+		preload ("res://elementos/audio/bgm/bgm-vinheta-3.mp3")
 	]
 }
 
