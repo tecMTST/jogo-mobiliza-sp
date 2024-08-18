@@ -36,7 +36,7 @@ Com todo esse potencial para mobilizar, chegou a hora de colocar essas habilidad
 [color=red]Toque no coração[/color] para baixar o aplicativo [color=red]Mobiliza SP[/color]![/center]"""
 
 
-	elif Global.pessoas_mobilizadas == Global.total_pessoas:
+	if Global.pessoas_mobilizadas == Global.total_pessoas:
 		pontuacao = Global.tempo_total - Global.tempo_restante
 		bb_texto = """[center]Excelente!
 
