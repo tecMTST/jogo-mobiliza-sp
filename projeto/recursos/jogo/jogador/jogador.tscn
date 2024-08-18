@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://recursos/jogo/jogador/jogador.gd" type="Script" id=1]
 [ext_resource path="res://elementos/imagem/jogador/female_tilesheet.png" type="Texture" id=2]
@@ -14,7 +14,7 @@
 [ext_resource path="res://recursos/jogo/jogador/Texto.gd" type="Script" id=12]
 [ext_resource path="res://recursos/jogo/mobilizometro/mobilizometro.tscn" type="PackedScene" id=13]
 [ext_resource path="res://elementos/imagem/cronometro_icone.png" type="Texture" id=14]
-[ext_resource path="res://elementos/fontes/anton.tres" type="DynamicFont" id=15]
+[ext_resource path="res://recursos/jogo/fim/texto_instrucao.tres" type="Theme" id=15]
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 12.0
@@ -22,9 +22,6 @@ height = 0.0
 
 [sub_resource type="Theme" id=15]
 default_font = ExtResource( 4 )
-
-[sub_resource type="Theme" id=29]
-default_font = ExtResource( 15 )
 
 [sub_resource type="Theme" id=16]
 default_font = ExtResource( 4 )
@@ -173,7 +170,7 @@ margin_bottom = 39.0
 grow_horizontal = 2
 grow_vertical = 2
 rect_scale = Vector2( 1.4, 1.4 )
-theme = SubResource( 29 )
+theme = ExtResource( 15 )
 bbcode_enabled = true
 bbcode_text = "[center]AA[/center]"
 text = "AA"
