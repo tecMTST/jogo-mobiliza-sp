@@ -27,14 +27,12 @@ Você conseguiu mobilizar [color=red]{pon}[/color] pessoas!
 Chegou a hora de mobilizar a cidade toda [color=red]pra valer[/color]!
 [color=red]Toque no coração[/color] para baixar o aplicativo [color=red]Mobiliza SP[/color]![/center]"""
 
-
 	elif porcentagem_completo >= .9:
 		bb_texto = """[center]Uau!
 
 Você conseguiu mobilizar [color=red]{pon}[/color] pessoas!
 Com todo esse potencial para mobilizar, chegou a hora de colocar essas habilidades na [color=red]vida real[/color]!
 [color=red]Toque no coração[/color] para baixar o aplicativo [color=red]Mobiliza SP[/color]![/center]"""
-
 
 	if Global.pessoas_mobilizadas == Global.total_pessoas:
 		pontuacao = Global.tempo_total - Global.tempo_restante
@@ -44,9 +42,7 @@ Você mobilizou a [color=red]CIDADE TODA[/color] em [color=red]{pon}[/color] seg
 Coloque todo esse potencial mobilizador para melhorar a cidade pra valer!
 [color=red]Toque no coração[/color] para baixar o aplicativo [color=red]Mobiliza SP[/color]![/center]"""
 
-
 	texto.bbcode_text = bb_texto.format({'pon': pontuacao})
-
 
 
 func _on_Button_pressed() -> void:
