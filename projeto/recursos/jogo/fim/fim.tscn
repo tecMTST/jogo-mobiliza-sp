@@ -94,15 +94,14 @@ theme = SubResource( 5 )
 text = "jogar novamente"
 
 [node name="BaixarAplicativo" type="TextureButton" parent="."]
-margin_left = -204.0
-margin_top = 108.0
-margin_right = 4330.0
-margin_bottom = 4642.0
+margin_left = -145.0
+margin_top = 209.0
+margin_right = 3097.0
+margin_bottom = 2255.0
 rect_scale = Vector2( 0.09, 0.09 )
-texture_normal = ExtResource( 14 )
+texture_normal = ExtResource( 16 )
 texture_pressed = ExtResource( 15 )
-texture_hover = ExtResource( 16 )
-texture_focused = ExtResource( 16 )
+texture_hover = ExtResource( 14 )
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="BaixarAplicativo" to="." method="_on_TextureButton_pressed"]
