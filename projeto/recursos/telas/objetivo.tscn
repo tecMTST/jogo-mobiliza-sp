@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://elementos/fontes/anton.tres" type="DynamicFont" id=1]
 [ext_resource path="res://recursos/telas/inicio.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://elementos/imagem/tutorial/tutorial-5.png" type="Texture" id=4]
 [ext_resource path="res://elementos/imagem/tutorial/tutorial-6.png" type="Texture" id=5]
 [ext_resource path="res://elementos/imagem/campanha/coracao-colorido.png" type="Texture" id=6]
+[ext_resource path="res://recursos/jogo/fim/texto_instrucao.tres" type="Theme" id=7]
 
 [sub_resource type="Theme" id=5]
 default_font = ExtResource( 1 )
@@ -36,7 +37,7 @@ margin_left = -313.0
 margin_top = -621.0
 margin_right = 313.0
 margin_bottom = 523.0
-theme = SubResource( 5 )
+theme = ExtResource( 7 )
 bbcode_enabled = true
 bbcode_text = "[center]
 ENCONTRE AS PESSOAS QUE NÃO ESTÃO MOBILIZADAS E PASSE POR ELAS PARA ENGAJÁ-LAS!
