@@ -21,14 +21,14 @@ TENTE JOGAR NOVAMENTE MOBILIZANDO AS PESSOAS NOS EVENTOS![/center]"""
 		$BaixarAplicativo.visible = false
 
 	if .05 < porcentagem_completo and porcentagem_completo < .9:
-		bb_texto = """[center]Parabéns!
+		bb_texto = """[center]PARABÉNS!
 
 VOCÊ CONSEGUIU MOBILIZAR [color=red]{pon}[/color] PESSOAS!
 CHEGOU A HORA DE MOBILIZAR A CIDADE TODA [color=red]PRA VALER[/color]!
 [color=red]TOQUE NO CORAÇÃO[/color] PARA BAIXAR O APLICATIVO [color=red]MOBILIZA SP[/color]![/center]"""
 
 	elif porcentagem_completo >= .9:
-		bb_texto = """[center]Uau!
+		bb_texto = """[center]UAU!
 
 VOCÊ CONSEGUIU MOBILIZAR [color=red]{pon}[/color] PESSOAS!
 COM TODO ESSE POTENCIAL, CHEGOU A HORA DE COLOCAR SUAS HABILIDADES NA [color=red]VIDA REAL[/color]!
