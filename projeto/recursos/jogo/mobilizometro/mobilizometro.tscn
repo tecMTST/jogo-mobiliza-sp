@@ -31,10 +31,10 @@ margin_bottom = -41.0
 percent_visible = false
 
 [node name="Texto" type="RichTextLabel" parent="."]
-margin_left = -279.0
-margin_top = -180.0
-margin_right = 321.0
-margin_bottom = -104.0
+margin_left = -255.0
+margin_top = -155.0
+margin_right = 317.0
+margin_bottom = -79.0
 theme = ExtResource( 2 )
 bbcode_enabled = true
 bbcode_text = "OK"
@@ -45,16 +45,16 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -313.0
-margin_top = -101.0
-margin_right = 987.0
-margin_bottom = 68.0
-rect_scale = Vector2( 0.5, 0.4 )
+margin_left = -260.0
+margin_top = -76.0
+margin_right = 1040.0
+margin_bottom = 93.0
+rect_scale = Vector2( 0.453248, 0.390305 )
 texture_under = ExtResource( 5 )
 texture_over = ExtResource( 3 )
 texture_progress = ExtResource( 4 )
 
 [node name="MobilizometroIcone" type="Sprite" parent="."]
-position = Vector2( -280, -69 )
-scale = Vector2( 0.107991, 0.107991 )
+position = Vector2( -272, -107 )
+scale = Vector2( 0.12815, 0.12815 )
 texture = ExtResource( 6 )
