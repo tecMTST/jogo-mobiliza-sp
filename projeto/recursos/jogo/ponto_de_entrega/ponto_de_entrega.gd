@@ -2,7 +2,8 @@ extends Node2D
 
 
 export var numero_de_pessoas := 15
-export var textura: Texture
+export var textura_desmobilizado: Texture
+export var textura_mobilizado: Texture
 # aumento do numero maximo de pessoas
 export var recompensa := 0
 
@@ -10,6 +11,9 @@ export var recompensa := 0
 var aleatorio = RandomNumberGenerator.new()
 var pessoas: Array = []
 var referencia_jogador: Jogador
+
+onready var mobilizado = $Mobilizado
+onready var desmobilizado = $Desmobilizado
 
 
 onready var barra_de_progresso = $BarraDeProgresso as ProgressBar
@@ -22,8 +26,10 @@ func _ready():
 	aleatorio.randomize()
 	barra_de_progresso.max_value = numero_de_pessoas
 	texto.alterar_maximo(numero_de_pessoas)
-	if textura:
-		$Sprite.texture = textura
+	if textura_desmobilizado:
+		desmobilizado.texture = textura_desmobilizado
+	if textura_mobilizado:
+		mobilizado.texture = textura_mobilizado
 
 
 func _process(delta):
@@ -55,6 +61,8 @@ func retirar_do_jogador(jogador: Jogador):
 		referencia_jogador.pontos_de_habilidade += 1
 		$Explosao.play("parabens")
 		emit_signal("atividade_ponto",numero_de_pessoas,"final")
+		mobilizado.visible = true
+		desmobilizado.visible = false
 		$texto_contador/c_colorido.visible = true
 		$texto_contador/c_preto.visible = false
 		referencia_jogador.aumentar_maximo_seguidores(recompensa)

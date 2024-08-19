@@ -314,9 +314,13 @@ animations = [ {
 [node name="ponto_de_entrega" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Mobilizado" type="Sprite" parent="."]
+visible = false
 position = Vector2( 0, -40 )
-scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 1 )
+
+[node name="Desmobilizado" type="Sprite" parent="."]
+position = Vector2( 0, -40 )
 texture = ExtResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="."]
