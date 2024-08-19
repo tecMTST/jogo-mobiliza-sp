@@ -3,13 +3,13 @@
 [ext_resource path="res://recursos/jogo/jogador/jogador.tscn" type="PackedScene" id=1]
 [ext_resource path="res://recursos/jogo/coisas/arvore.tscn" type="PackedScene" id=2]
 [ext_resource path="res://recursos/jogo/pessoa/pessoa.tscn" type="PackedScene" id=3]
-[ext_resource path="res://elementos/imagem/ambiente/ponto_de_entrega/banca_1.png" type="Texture" id=4]
+[ext_resource path="res://elementos/imagem/pontos/ato_1.png" type="Texture" id=4]
 [ext_resource path="res://recursos/jogo/mobiliza.gd" type="Script" id=5]
 [ext_resource path="res://recursos/jogo/mapa/mapa.tscn" type="PackedScene" id=6]
 [ext_resource path="res://recursos/jogo/ponto_de_entrega/ponto_de_entrega.tscn" type="PackedScene" id=7]
-[ext_resource path="res://elementos/imagem/ambiente/ponto_de_entrega/comicio_1.png" type="Texture" id=8]
-[ext_resource path="res://elementos/imagem/ambiente/ponto_de_entrega/banca_2.png" type="Texture" id=9]
-[ext_resource path="res://elementos/imagem/ambiente/ponto_de_entrega/ato_1.png" type="Texture" id=10]
+[ext_resource path="res://elementos/imagem/pontos/banca_2.png" type="Texture" id=8]
+[ext_resource path="res://elementos/imagem/pontos/ato_2.png" type="Texture" id=9]
+[ext_resource path="res://elementos/imagem/pontos/comicio_2.png" type="Texture" id=10]
 [ext_resource path="res://elementos/audio/bgm/amb-cidade.mp3" type="AudioStream" id=11]
 [ext_resource path="res://elementos/imagem/ambiente/coisa/weed01.png" type="Texture" id=12]
 [ext_resource path="res://elementos/imagem/ambiente/coisa/weed02.png" type="Texture" id=13]
@@ -26,8 +26,8 @@
 [ext_resource path="res://recursos/jogo/coisas/carro_tipo1.tscn" type="PackedScene" id=24]
 [ext_resource path="res://recursos/jogo/coisas/predio.tscn" type="PackedScene" id=25]
 [ext_resource path="res://recursos/jogo/AudioStreamBGM.gd" type="Script" id=26]
-[ext_resource path="res://elementos/imagem/ambiente/ponto_de_entrega/ato_2.png" type="Texture" id=27]
-[ext_resource path="res://elementos/imagem/ambiente/ponto_de_entrega/comicio_2.png" type="Texture" id=28]
+[ext_resource path="res://elementos/imagem/pontos/banca_1.png" type="Texture" id=27]
+[ext_resource path="res://elementos/imagem/pontos/comicio_1.png" type="Texture" id=28]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 62.5, 2142 )
@@ -323,50 +323,50 @@ position = Vector2( 1584, -1210 )
 [node name="ponto_de_entrega" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 328, 304 )
 numero_de_pessoas = 5
-textura_desmobilizado = ExtResource( 4 )
-textura_mobilizado = ExtResource( 9 )
+textura_desmobilizado = ExtResource( 27 )
+textura_mobilizado = ExtResource( 8 )
 recompensa = 2
 
 [node name="ponto_de_entrega2" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 1423, -3 )
 numero_de_pessoas = 20
-textura_desmobilizado = ExtResource( 10 )
-textura_mobilizado = ExtResource( 27 )
+textura_desmobilizado = ExtResource( 4 )
+textura_mobilizado = ExtResource( 9 )
 recompensa = 3
 
 [node name="ponto_de_entrega3" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( -1642, 8 )
 numero_de_pessoas = 20
-textura_desmobilizado = ExtResource( 10 )
-textura_mobilizado = ExtResource( 27 )
+textura_desmobilizado = ExtResource( 4 )
+textura_mobilizado = ExtResource( 9 )
 recompensa = 3
 
 [node name="ponto_de_entrega5" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( -1233, -1351 )
 numero_de_pessoas = 5
-textura_desmobilizado = ExtResource( 4 )
-textura_mobilizado = ExtResource( 9 )
+textura_desmobilizado = ExtResource( 27 )
+textura_mobilizado = ExtResource( 8 )
 recompensa = 2
 
 [node name="ponto_de_entrega6" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 6, -1847 )
 numero_de_pessoas = 20
-textura_desmobilizado = ExtResource( 10 )
-textura_mobilizado = ExtResource( 27 )
+textura_desmobilizado = ExtResource( 4 )
+textura_mobilizado = ExtResource( 9 )
 recompensa = 3
 
 [node name="ponto_de_entrega7" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 1251, -1288 )
 numero_de_pessoas = 5
-textura_desmobilizado = ExtResource( 4 )
-textura_mobilizado = ExtResource( 9 )
+textura_desmobilizado = ExtResource( 27 )
+textura_mobilizado = ExtResource( 8 )
 recompensa = 2
 
 [node name="ponto_de_entrega4" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( -3, 1720 )
 numero_de_pessoas = 50
-textura_desmobilizado = ExtResource( 8 )
-textura_mobilizado = ExtResource( 28 )
+textura_desmobilizado = ExtResource( 28 )
+textura_mobilizado = ExtResource( 10 )
 recompensa = 10
 
 [node name="pessoa" parent="YSort" instance=ExtResource( 3 )]
