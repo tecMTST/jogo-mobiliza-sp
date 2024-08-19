@@ -8,7 +8,7 @@ export var rankings: Array = [
 	{ valor = 20, titulo = 'MOBILIZADOR', tint = Color(.5, 0, 0) },
 	{ valor = 75, titulo = 'COORD. DE BANCA' },
 	{ valor = 125, titulo = 'LÍDER DE GRUPO' },
-	{ valor = 1000, titulo = 'MOBILIZAÇÃO TOTAL!' }
+#	{ valor = 1000, titulo = 'MOBILIZAÇÃO TOTAL!' }
 ]
 
 
@@ -16,11 +16,17 @@ onready var progresso := $TextureProgress
 onready var texto := $Texto as RichTextLabel
 
 
+var ranking_atual := ''
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	ranking_atual = rankings[0].titulo
 	progresso.max_value = valor_maximo
 	progresso.value = 0
 	texto.bbcode_text = "[center]%s[/center]" % [rankings[0].titulo]
+	for i in range(rankings.size()):
+		get_node(str(i)).name = rankings[i].titulo
 
 
 func alterar_valor_maximo(novo_maximo: int):
@@ -33,5 +39,9 @@ func alterar_valor(novo_valor: int):
 		if novo_valor >= ranking.valor:
 			continue
 		texto.bbcode_text = "[center]%s[/center]" % [ranking.titulo]
+		if ranking_atual != ranking.titulo:
+			get_node(ranking_atual).desativar()
+			get_node(ranking.titulo).ativar()
+		ranking_atual = ranking.titulo
 		break
 	

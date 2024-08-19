@@ -1,21 +1,24 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://recursos/jogo/mobilizometro/mobilizometro.gd" type="Script" id=1]
 [ext_resource path="res://recursos/jogo/fim/texto_instrucao.tres" type="Theme" id=2]
 [ext_resource path="res://elementos/imagem/jogador/Linha_stroke.png" type="Texture" id=3]
 [ext_resource path="res://elementos/imagem/jogador/Linha_preenchido.png" type="Texture" id=4]
 [ext_resource path="res://elementos/imagem/jogador/Linha.png" type="Texture" id=5]
-[ext_resource path="res://elementos/imagem/jogador/mobilizometro_icone.png" type="Texture" id=6]
+[ext_resource path="res://recursos/jogo/mobilizometro/icone.tscn" type="PackedScene" id=6]
+[ext_resource path="res://elementos/imagem/jogador/mobilizometro/1.png" type="Texture" id=7]
+[ext_resource path="res://elementos/imagem/jogador/mobilizometro/3.png" type="Texture" id=8]
+[ext_resource path="res://elementos/imagem/jogador/mobilizometro/2.png" type="Texture" id=9]
 
 [node name="mobilizometro" type="Control"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = 3.0
-margin_top = -21.0
-margin_right = 3.0
-margin_bottom = -21.0
+margin_left = -7.0
+margin_top = -29.0
+margin_right = -7.0
+margin_bottom = -29.0
 script = ExtResource( 1 )
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
@@ -29,16 +32,6 @@ margin_top = -114.0
 margin_right = 300.0
 margin_bottom = -41.0
 percent_visible = false
-
-[node name="Texto" type="RichTextLabel" parent="."]
-margin_left = -255.0
-margin_top = -155.0
-margin_right = 317.0
-margin_bottom = -79.0
-theme = ExtResource( 2 )
-bbcode_enabled = true
-bbcode_text = "OK"
-text = "OK"
 
 [node name="TextureProgress" type="TextureProgress" parent="."]
 anchor_left = 0.5
@@ -54,7 +47,34 @@ texture_under = ExtResource( 5 )
 texture_over = ExtResource( 3 )
 texture_progress = ExtResource( 4 )
 
-[node name="MobilizometroIcone" type="Sprite" parent="."]
-position = Vector2( -272, -107 )
-scale = Vector2( 0.12815, 0.12815 )
-texture = ExtResource( 6 )
+[node name="0" parent="." instance=ExtResource( 6 )]
+position = Vector2( -254, -55 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="1" parent="." instance=ExtResource( 6 )]
+visible = false
+position = Vector2( -254, -55 )
+scale = Vector2( 0.5, 0.5 )
+textura = ExtResource( 7 )
+
+[node name="2" parent="." instance=ExtResource( 6 )]
+visible = false
+position = Vector2( -254, -55 )
+scale = Vector2( 0.5, 0.5 )
+textura = ExtResource( 9 )
+
+[node name="3" parent="." instance=ExtResource( 6 )]
+visible = false
+position = Vector2( -254, -55 )
+scale = Vector2( 0.5, 0.5 )
+textura = ExtResource( 8 )
+
+[node name="Texto" type="RichTextLabel" parent="."]
+margin_left = -255.0
+margin_top = -155.0
+margin_right = 317.0
+margin_bottom = -79.0
+theme = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "OK"
+text = "OK"
