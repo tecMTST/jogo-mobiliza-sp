@@ -19,15 +19,19 @@ func _ready():
 	for crianca in $YSort.get_children():
 		if 'pessoa' in crianca.name:
 			total_seguidores += 1
-	$YSort/jogador.alterar_maximo_entregas(total_seguidores)
+	jogador.alterar_maximo_entregas(total_seguidores)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if total_seguidores == jogador.total_entregues:
+		finalizar_jogo()
 
+func finalizar_jogo():
+	Global.total_pessoas = total_seguidores
+	Global.pessoas_mobilizadas = jogador.total_entregues
+	TrocadorDeCenas.trocar_cena("res://recursos/jogo/fim/fim.tscn")
+	
 
 func _on_Temporizador_timeout():
-	Global.total_pessoas = total_seguidores
-	Global.pessoas_mobilizadas = $YSort/jogador.total_entregues
-	TrocadorDeCenas.trocar_cena("res://recursos/jogo/fim/fim.tscn")
+	finalizar_jogo()
