@@ -182,6 +182,7 @@ scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 14 )
 
 [node name="ContadorFPS" type="Label" parent="."]
+visible = false
 margin_left = -337.0
 margin_top = -670.0
 margin_right = -245.0
