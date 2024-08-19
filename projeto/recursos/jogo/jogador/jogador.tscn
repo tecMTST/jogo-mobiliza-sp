@@ -14,7 +14,7 @@
 [ext_resource path="res://recursos/jogo/jogador/Texto.gd" type="Script" id=12]
 [ext_resource path="res://recursos/jogo/mobilizometro/mobilizometro.tscn" type="PackedScene" id=13]
 [ext_resource path="res://elementos/imagem/cronometro_icone.png" type="Texture" id=14]
-[ext_resource path="res://recursos/jogo/fim/texto_instrucao.tres" type="Theme" id=15]
+[ext_resource path="res://elementos/fontes/ui_tema.tres" type="Theme" id=16]
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 12.0
@@ -170,7 +170,7 @@ margin_bottom = 39.0
 grow_horizontal = 2
 grow_vertical = 2
 rect_scale = Vector2( 1.4, 1.4 )
-theme = ExtResource( 15 )
+theme = ExtResource( 16 )
 bbcode_enabled = true
 bbcode_text = "[center]AA[/center]"
 text = "AA"
@@ -233,6 +233,7 @@ z_as_relative = false
 [node name="mobilizometro" parent="mobilizometro" instance=ExtResource( 13 )]
 margin_top = 551.0
 margin_bottom = 551.0
+theme = ExtResource( 16 )
 
 [connection signal="atividade_player" from="." to="AudioStreamJogador" method="_on_jogador_atividade_player"]
 [connection signal="alavanca_movida" from="alavanca_de_toque" to="." method="_on_alavanca_de_toque_alavanca_movida"]

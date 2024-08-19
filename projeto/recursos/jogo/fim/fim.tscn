@@ -1,28 +1,16 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://elementos/fontes/anton.tres" type="DynamicFont" id=1]
 [ext_resource path="res://recursos/jogo/fim/fim.gd" type="Script" id=2]
 [ext_resource path="res://recursos/jogo/mobiliza.tscn" type="PackedScene" id=3]
-[ext_resource path="res://elementos/fontes/fonte-campanha.otf" type="DynamicFontData" id=4]
+[ext_resource path="res://recursos/jogo/fim/texto_instrucao.tres" type="Theme" id=4]
 [ext_resource path="res://elementos/audio/bgm/bgm-vinheta-fim.mp3" type="AudioStream" id=5]
-[ext_resource path="res://elementos/imagem/campanha/logo-colorido.png" type="Texture" id=14]
-[ext_resource path="res://elementos/imagem/campanha/logo-branco.png" type="Texture" id=16]
+[ext_resource path="res://elementos/imagem/campanha/logo-fundo-branco.png" type="Texture" id=6]
 
 [sub_resource type="Theme" id=7]
 
-[sub_resource type="DynamicFont" id=6]
-size = 50
-font_data = ExtResource( 4 )
-
-[sub_resource type="Theme" id=3]
-default_font = SubResource( 6 )
-
 [sub_resource type="Theme" id=4]
 default_font = ExtResource( 1 )
-
-[sub_resource type="Theme" id=5]
-default_font = ExtResource( 1 )
-Button/fonts/font = ExtResource( 1 )
 
 [node name="fim" type="Control"]
 anchor_left = 0.5
@@ -38,7 +26,6 @@ margin_top = -1008.0
 margin_right = 711.0
 margin_bottom = 1104.0
 theme = SubResource( 7 )
-color = Color( 0, 0, 0, 1 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 anchor_left = 0.5
@@ -49,7 +36,8 @@ margin_left = -300.0
 margin_top = -581.0
 margin_right = 300.0
 margin_bottom = 465.0
-theme = SubResource( 3 )
+theme = ExtResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
 bbcode_text = "LOREM IPSUM"
 text = "LOREM IPSUM"
@@ -74,11 +62,12 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -172.5
-margin_top = 535.5
-margin_right = 175.5
-margin_bottom = 612.5
-theme = SubResource( 5 )
+margin_left = -221.0
+margin_top = 536.0
+margin_right = 230.0
+margin_bottom = 613.0
+theme = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "JOGAR NOVAMENTE"
 
 [node name="BaixarAplicativo" type="TextureButton" parent="."]
@@ -87,9 +76,9 @@ margin_top = 272.0
 margin_right = 3158.0
 margin_bottom = 2357.0
 rect_scale = Vector2( 0.09, 0.09 )
-texture_normal = ExtResource( 16 )
-texture_pressed = ExtResource( 14 )
-texture_hover = ExtResource( 14 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 6 )
 
 [node name="AudioStreamFim" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )

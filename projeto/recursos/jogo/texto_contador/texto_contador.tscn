@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://recursos/jogo/fim/texto_instrucao.tres" type="Theme" id=1]
+[ext_resource path="res://elementos/fontes/ui_tema.tres" type="Theme" id=1]
 [ext_resource path="res://recursos/jogo/texto_contador/texto_contador.gd" type="Script" id=2]
 
 [node name="texto_contador" type="Node2D"]

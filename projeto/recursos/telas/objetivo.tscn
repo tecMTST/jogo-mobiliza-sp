@@ -26,7 +26,6 @@ margin_left = -735.0
 margin_top = -1008.0
 margin_right = 711.0
 margin_bottom = 1104.0
-color = Color( 0, 0, 0, 1 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 anchor_left = 0.5
@@ -38,6 +37,7 @@ margin_top = -612.0
 margin_right = 313.0
 margin_bottom = 532.0
 theme = ExtResource( 7 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
 bbcode_text = "[center]
 ENCONTRE AS PESSOAS QUE NÃO ESTÃO MOBILIZADAS E PASSE POR ELAS PARA ENGAJÁ-LAS!
@@ -73,6 +73,7 @@ margin_right = 365.0
 margin_bottom = 640.0
 rect_scale = Vector2( 0.8, 0.8 )
 theme = SubResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
 bbcode_text = "[center]
 TOQUE NA TELA PARA CONTINUAR
