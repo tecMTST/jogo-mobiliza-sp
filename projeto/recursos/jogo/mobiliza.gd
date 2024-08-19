@@ -6,6 +6,8 @@ export var total_seguidores: int = 0
 onready var _temporizador: Timer = $Temporizador
 onready var jogador = $YSort/jogador as Jogador
 
+var finalizado = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Global.tempo_total = tempo
@@ -28,8 +30,11 @@ func _process(delta):
 		finalizar_jogo()
 
 func finalizar_jogo():
+	if finalizado: return
+	finalizado = true
 	Global.total_pessoas = total_seguidores
 	Global.pessoas_mobilizadas = jogador.total_entregues
+	Global.tempo_restante = _temporizador.time_left
 	TrocadorDeCenas.trocar_cena("res://recursos/jogo/fim/fim.tscn")
 	
 
