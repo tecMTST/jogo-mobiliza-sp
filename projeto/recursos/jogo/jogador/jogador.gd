@@ -63,9 +63,39 @@ func remover_seguidor(seguidor):
 func get_input():
 	velocidade = velocidade.normalized() * multiplicador_velocidade
 
+func controle_teclade():
+	var teclado_usado = false
+	var velocidade_teclado = Vector2.ZERO
+	
+	if Input.is_action_just_released("down") or\
+	   Input.is_action_just_released("up") or\
+	   Input.is_action_just_released("left") or\
+	   Input.is_action_just_released("right"):
+		teclado_usado = true
+	
+	if Input.is_action_pressed("up"):
+		velocidade_teclado.y = -1
+		teclado_usado = true
+	elif Input.is_action_pressed("down"):
+		velocidade_teclado.y = 1
+		teclado_usado = true
+
+	if Input.is_action_pressed("left"):
+		velocidade_teclado.x = -1
+		teclado_usado = true
+	elif Input.is_action_pressed("right"):
+		velocidade_teclado.x = 1
+		teclado_usado = true
+	
+	if teclado_usado:
+		var multi = 1
+		if Input.is_action_pressed("corre"):
+			multi = 2
+		velocidade = velocidade_teclado.normalized() * multiplicador_velocidade * multi
+
 func _process(delta):
-	if velocidade.length_squared() >= multiplicador_velocidade:
-		_movendo = true
+	controle_teclade()
+	_movendo = velocidade.length_squared() >= multiplicador_velocidade
 		
 	if velocidade.x<0:
 		sprite.scale.x=-abs(sprite.scale.x)
