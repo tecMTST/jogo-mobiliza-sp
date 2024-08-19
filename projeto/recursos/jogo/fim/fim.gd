@@ -38,7 +38,7 @@ COM TODO ESSE POTENCIAL, CHEGOU A HORA DE COLOCAR SUAS HABILIDADES NA [color=red
 		pontuacao = Global.tempo_total - Global.tempo_restante
 		bb_texto = """[center]EXCELENTE!
 
-VOCÊ MOBILIZOU [color=red]CIDADE TODA[/color] EM [color=red]{pon}[/color] SEGUNDOS!
+VOCÊ MOBILIZOU A [color=red]CIDADE TODA[/color] EM [color=red]{pon}[/color] SEGUNDOS!
 COLOQUE TODO O SEU POTENCIAL PARA MOBILIZAR A CIDADE [color=red]PRA VALER[/color]!
 [color=red]TOQUE NO CORAÇÃO[/color] PARA BAIXAR O APLICATIVO [color=red]MOBILIZA SP[/color]![/center]"""
 

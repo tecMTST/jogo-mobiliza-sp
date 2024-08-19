@@ -762,7 +762,7 @@ position = Vector2( 113, 310 )
 position = Vector2( 92, -313 )
 
 [node name="carro_tipo1" parent="YSort" instance=ExtResource( 24 )]
-position = Vector2( -425, -321 )
+position = Vector2( -501, -289 )
 
 [node name="carro_tipo12" parent="YSort" instance=ExtResource( 24 )]
 position = Vector2( 397, 1506 )
@@ -870,7 +870,7 @@ position = Vector2( -450, 88 )
 position = Vector2( -453, 184 )
 
 [node name="hidrante" parent="YSort" instance=ExtResource( 22 )]
-position = Vector2( -314, -306 )
+position = Vector2( -316, -306 )
 
 [node name="hidrante2" parent="YSort" instance=ExtResource( 22 )]
 position = Vector2( 521, 319 )
