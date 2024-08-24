@@ -52,7 +52,7 @@ func _on_Button_pressed() -> void:
 func _on_TextureButton_pressed() -> void:
 	if OS.has_feature('JavaScript'):
 		JavaScript.eval("""
-			window.open('https://nucleodetecnologia.com.br/', '_blank').focus();
+			window.open('https://boulos50.com.br/grupos-de-acao/', '_blank').focus();
 		""")
 	else:
-		OS.shell_open("https://nucleodetecnologia.com.br/")
+		OS.shell_open("https://boulos50.com.br/grupos-de-acao/")
