@@ -1,6 +1,6 @@
 extends Node2D
 
-export var tempo: int = 180
+export var tempo: int = 200
 export var total_seguidores: int = 0
 
 onready var _temporizador: Timer = $Temporizador
