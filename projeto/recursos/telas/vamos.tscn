@@ -32,9 +32,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -313.0
-margin_top = -657.0
+margin_top = -650.0
 margin_right = 313.0
-margin_bottom = 479.0
+margin_bottom = 486.0
 theme = ExtResource( 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
@@ -44,8 +44,7 @@ LEVE AS PESSOAS PARA OS EVENTOS NA CIDADE PARA MOBILIZÁ-LAS! LOTANDO CADA EVENT
 
 
 
-[color=red]MOBILIZE TODA A CIDADE[/color]
- EM TODOS OS EVENTOS ANTES DO TEMPO ACABAR!
+[color=red]SE TORNE UM MOBILIZADOR[/color] E FAÇA CADA VEZ MAIS CORAÇÕES!
 VAMOS LÁ!
 [/center]"
 text = "
@@ -54,8 +53,7 @@ LEVE AS PESSOAS PARA OS EVENTOS NA CIDADE PARA MOBILIZÁ-LAS! LOTANDO CADA EVENT
 
 
 
-MOBILIZE TODA A CIDADE
- EM TODOS OS EVENTOS ANTES DO TEMPO ACABAR!
+SE TORNE UM MOBILIZADOR E FAÇA CADA VEZ MAIS CORAÇÕES!
 VAMOS LÁ!
 "
 
