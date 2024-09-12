@@ -25,14 +25,14 @@ TENTE JOGAR NOVAMENTE MOBILIZANDO AS PESSOAS NOS EVENTOS![/center]"""
 
 VOCÊ CONSEGUIU MOBILIZAR [color=red]{pon}[/color] PESSOAS!
 CHEGOU A HORA DE MOBILIZAR A CIDADE TODA [color=red]PRA VALER[/color]!
-[color=red]TOQUE NO CORAÇÃO[/color] PARA BAIXAR O APLICATIVO [color=red]MOBILIZA SP[/color]![/center]"""
+[color=red]TOQUE NO CORAÇÃO[/color] PARA BAIXAR O APLICATIVO [color=red]AMOR POR SP[/color]![/center]"""
 
 	elif porcentagem_completo >= .9:
 		bb_texto = """[center]UAU!
 
 VOCÊ CONSEGUIU MOBILIZAR [color=red]{pon}[/color] PESSOAS!
 COM TODO ESSE POTENCIAL, CHEGOU A HORA DE COLOCAR SUAS HABILIDADES NA [color=red]VIDA REAL[/color]!
-[color=red]TOQUE NO CORAÇÃO[/color] PARA BAIXAR O APLICATIVO [color=red]MOBILIZA SP[/color]![/center]"""
+[color=red]TOQUE NO CORAÇÃO[/color] PARA BAIXAR O APLICATIVO [color=red]AMOR POR SP[/color]![/center]"""
 
 	if Global.pessoas_mobilizadas == Global.total_pessoas:
 		pontuacao = Global.tempo_total - Global.tempo_restante
@@ -40,7 +40,7 @@ COM TODO ESSE POTENCIAL, CHEGOU A HORA DE COLOCAR SUAS HABILIDADES NA [color=red
 
 VOCÊ MOBILIZOU A [color=red]CIDADE TODA[/color] EM [color=red]{pon}[/color] SEGUNDOS!
 COLOQUE TODO O SEU POTENCIAL PARA MOBILIZAR A CIDADE [color=red]PRA VALER[/color]!
-[color=red]TOQUE NO CORAÇÃO[/color] PARA BAIXAR O APLICATIVO [color=red]MOBILIZA SP[/color]![/center]"""
+[color=red]TOQUE NO CORAÇÃO[/color] PARA BAIXAR O APLICATIVO [color=red]AMOR POR SP[/color]![/center]"""
 
 	texto.bbcode_text = bb_texto.format({'pon': pontuacao})
 
