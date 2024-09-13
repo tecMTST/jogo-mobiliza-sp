@@ -1,11 +1,12 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://elementos/fontes/anton.tres" type="DynamicFont" id=1]
 [ext_resource path="res://recursos/jogo/fim/fim.gd" type="Script" id=2]
 [ext_resource path="res://recursos/jogo/mobiliza.tscn" type="PackedScene" id=3]
 [ext_resource path="res://recursos/jogo/fim/texto_instrucao.tres" type="Theme" id=4]
 [ext_resource path="res://elementos/audio/bgm/bgm-vinheta-fim.mp3" type="AudioStream" id=5]
-[ext_resource path="res://elementos/imagem/campanha/logo-fundo-branco.png" type="Texture" id=6]
+[ext_resource path="res://elementos/imagem/play_store.svg" type="Texture" id=6]
+[ext_resource path="res://elementos/imagem/app_store.svg" type="Texture" id=7]
 
 [sub_resource type="Theme" id=7]
 
@@ -32,15 +33,23 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -300.0
-margin_top = -581.0
-margin_right = 300.0
-margin_bottom = 465.0
+margin_left = -313.0
+margin_top = -592.0
+margin_right = 321.0
+margin_bottom = 514.0
 theme = ExtResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
-bbcode_text = "LOREM IPSUM"
-text = "LOREM IPSUM"
+bbcode_text = "[center]EXCELENTE!
+
+VOCÊ MOBILIZOU A [color=red]CIDADE TODA[/color] EM [color=red]{pon}[/color] SEGUNDOS!
+COLOQUE TODO O SEU POTENCIAL PARA MOBILIZAR A CIDADE [color=red]PRA VALER[/color]!
+[color=red]TOQUE NOS BOTÕES[/color] PARA BAIXAR O APLICATIVO [color=red]AMOR POR SP[/color]![/center]"
+text = "EXCELENTE!
+
+VOCÊ MOBILIZOU A CIDADE TODA EM {pon} SEGUNDOS!
+COLOQUE TODO O SEU POTENCIAL PARA MOBILIZAR A CIDADE PRA VALER!
+TOQUE NOS BOTÕES PARA BAIXAR O APLICATIVO AMOR POR SP!"
 
 [node name="LinkButton" type="LinkButton" parent="."]
 visible = false
@@ -62,28 +71,39 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -221.0
+margin_left = -222.0
 margin_top = 536.0
-margin_right = 230.0
+margin_right = 229.0
 margin_bottom = 613.0
 theme = ExtResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "JOGAR NOVAMENTE"
-
-[node name="BaixarAplicativo" type="TextureButton" parent="."]
-margin_left = -145.0
-margin_top = 272.0
-margin_right = 3158.0
-margin_bottom = 2357.0
-rect_scale = Vector2( 0.09, 0.09 )
-texture_normal = ExtResource( 6 )
-texture_pressed = ExtResource( 6 )
-texture_hover = ExtResource( 6 )
 
 [node name="AudioStreamFim" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
 autoplay = true
 bus = "BGM"
 
+[node name="BaixarAplicativo" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="PlayStore" type="TextureButton" parent="BaixarAplicativo"]
+margin_left = -198.0
+margin_top = 200.0
+margin_right = 4302.0
+margin_bottom = 1533.0
+rect_scale = Vector2( 0.09, 0.09 )
+texture_normal = ExtResource( 6 )
+
+[node name="AppStore" type="TextureButton" parent="BaixarAplicativo"]
+margin_left = -185.0
+margin_top = 359.0
+margin_right = 4003.0
+margin_bottom = 1759.0
+rect_scale = Vector2( 0.09, 0.09 )
+texture_normal = ExtResource( 7 )
+
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
-[connection signal="pressed" from="BaixarAplicativo" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="BaixarAplicativo/PlayStore" to="." method="_on_PlayStore_pressed"]
+[connection signal="pressed" from="BaixarAplicativo/AppStore" to="." method="_on_AppStore_pressed"]
