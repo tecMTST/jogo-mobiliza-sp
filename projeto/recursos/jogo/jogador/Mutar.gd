@@ -22,3 +22,10 @@ func _on_Mutar_pressed() -> void:
 	var bus_idx = AudioServer.get_bus_index("Master")
 	AudioServer.set_bus_mute(bus_idx, mutado)
 	$Sprite.visible = mutado
+
+func _notification(what):
+	var bus_idx = AudioServer.get_bus_index("Master")
+	if what == MainLoop.NOTIFICATION_WM_FOCUS_IN:
+		AudioServer.set_bus_mute(bus_idx, false)
+	elif what == MainLoop.NOTIFICATION_WM_FOCUS_OUT:
+		AudioServer.set_bus_mute(bus_idx, true)
