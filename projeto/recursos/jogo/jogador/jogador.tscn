@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://recursos/jogo/jogador/jogador.gd" type="Script" id=1]
 [ext_resource path="res://elementos/imagem/jogador/female_tilesheet.png" type="Texture" id=2]
@@ -14,7 +14,10 @@
 [ext_resource path="res://recursos/jogo/jogador/Texto.gd" type="Script" id=12]
 [ext_resource path="res://recursos/jogo/mobilizometro/mobilizometro.tscn" type="PackedScene" id=13]
 [ext_resource path="res://elementos/imagem/cronometro_icone.png" type="Texture" id=14]
+[ext_resource path="res://elementos/imagem/mute/shaded-light/shadedLight13.png" type="Texture" id=15]
 [ext_resource path="res://elementos/fontes/ui_tema.tres" type="Theme" id=16]
+[ext_resource path="res://recursos/jogo/jogador/Mutar.gd" type="Script" id=17]
+[ext_resource path="res://elementos/imagem/mute/shaded-dark/shadedDark15.png" type="Texture" id=18]
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 12.0
@@ -151,10 +154,10 @@ position = Vector2( 0, -106 )
 [node name="TempoRestante" type="ProgressBar" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -232.0
-margin_top = -638.0
-margin_right = 268.0
-margin_bottom = -588.0
+margin_left = -304.0
+margin_top = -645.0
+margin_right = 196.0
+margin_bottom = -595.0
 theme = SubResource( 15 )
 percent_visible = false
 
@@ -180,6 +183,17 @@ script = ExtResource( 12 )
 position = Vector2( -3, 21 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 14 )
+
+[node name="Mutar" type="TouchScreenButton" parent="TempoRestante"]
+position = Vector2( 542, -22 )
+scale = Vector2( 2, 2 )
+normal = ExtResource( 15 )
+script = ExtResource( 17 )
+
+[node name="Sprite" type="Sprite" parent="TempoRestante/Mutar"]
+visible = false
+position = Vector2( 25, 24 )
+texture = ExtResource( 18 )
 
 [node name="ContadorFPS" type="Label" parent="."]
 visible = false
@@ -238,5 +252,6 @@ theme = ExtResource( 16 )
 [connection signal="atividade_player" from="." to="AudioStreamJogador" method="_on_jogador_atividade_player"]
 [connection signal="alavanca_movida" from="alavanca_de_toque" to="." method="_on_alavanca_de_toque_alavanca_movida"]
 [connection signal="alavanca_solta" from="alavanca_de_toque" to="." method="_on_alavanca_de_toque_alavanca_solta"]
+[connection signal="pressed" from="TempoRestante/Mutar" to="TempoRestante/Mutar" method="_on_Mutar_pressed"]
 [connection signal="input_event" from="ToggleDebug/Area2D" to="ToggleDebug" method="_on_Area2D_input_event"]
 [connection signal="mouse_entered" from="ToggleDebug/Area2D" to="ToggleDebug" method="_on_Area2D_mouse_entered"]
